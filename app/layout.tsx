@@ -1,20 +1,9 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import { SiteFooter } from './components/SiteFooter';
 import { SiteHeader } from './components/SiteHeader';
 import './globals.css';
 
-const siteUrl = process.env.SITE_URL ?? 'http://localhost:3000';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+const siteUrl = process.env.SITE_URL ?? 'https://vitalii87.github.io';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -42,9 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body>
         <SiteHeader />
         {children}
         <SiteFooter />
