@@ -151,6 +151,19 @@ a { color: inherit; text-decoration: none; }
 .articleBody section > p { margin: 0 0 20px; color: #555850; font-size: 18px; line-height: 1.75; }
 .articleBody blockquote { margin: 52px 0 12px; padding: 42px 45px; border-left: 5px solid var(--acid); background: var(--paper); font-size: 27px; line-height: 1.35; letter-spacing: -.025em; }
 .sourceLink { display: inline-block; margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); font: 10px var(--font-geist-mono); text-transform: uppercase; letter-spacing: .07em; }
+.researchPanel { margin-top: 120px; padding: 44px; background: var(--ink); color: var(--white); }
+.researchPanelHead { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-bottom: 26px; border-bottom: 1px solid rgba(255,255,255,.22); }
+.researchPanelHead span { padding: 9px 12px; border: 1px solid var(--acid); color: var(--acid); font: 10px var(--font-geist-mono); text-transform: uppercase; letter-spacing: .07em; }
+.researchPanelBody { display: grid; grid-template-columns: 1.45fr 1fr; gap: 70px; padding: 52px 0; }
+.researchPanelBody h2 { max-width: 720px; margin: 0 0 24px; font-size: clamp(42px, 5vw, 67px); line-height: 1; letter-spacing: -.05em; }
+.researchPanelBody > div > p { max-width: 690px; margin: 0; color: #b9bbb4; font-size: 17px; line-height: 1.65; }
+.researchPanelBody dl { margin: 0; border-top: 1px solid rgba(255,255,255,.22); }
+.researchPanelBody dl div { display: grid; grid-template-columns: 1fr 1.45fr; gap: 18px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,.22); }
+.researchPanelBody dt { color: var(--acid); font: 10px var(--font-geist-mono); text-transform: uppercase; letter-spacing: .06em; }
+.researchPanelBody dd { margin: 0; font-size: 13px; line-height: 1.4; }
+.researchLinks { display: flex; flex-wrap: wrap; gap: 9px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,.22); }
+.researchLinks a { padding: 13px 16px; border: 1px solid rgba(255,255,255,.4); font-size: 13px; }
+.researchLinks a.primary { background: var(--acid); border-color: var(--acid); color: var(--ink); }
 .quotePlaceholder { margin: 70px 0 20px; padding: 50px; border-left: 5px solid var(--acid); background: var(--paper); font-size: 29px; line-height: 1.3; letter-spacing: -.025em; }
 .discussionPanel { margin-top: 120px; padding: 58px; background: var(--blue); }
 .discussionPanel h2 { max-width: 850px; margin: 25px 0 45px; font-size: clamp(42px, 5vw, 67px); line-height: 1.03; letter-spacing: -.05em; }
@@ -227,6 +240,9 @@ a { color: inherit; text-decoration: none; }
   .articleBody aside { border-bottom: 1px solid var(--line); }
   .quotePlaceholder { padding: 32px; font-size: 24px; }
   .articleBody blockquote { padding: 30px; font-size: 23px; }
+  .researchPanel { margin-top: 80px; padding: 30px 24px; }
+  .researchPanelHead { align-items: flex-start; flex-direction: column; }
+  .researchPanelBody { grid-template-columns: 1fr; gap: 42px; padding: 42px 0; }
   .discussionPanel { margin-top: 80px; padding: 38px 26px; }
   .aboutLayout { gap: 50px; padding-bottom: 95px; }
   .portraitPlaceholder { min-height: 440px; }

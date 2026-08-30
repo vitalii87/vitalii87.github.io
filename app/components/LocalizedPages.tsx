@@ -39,7 +39,26 @@ export function LocalizedVisionsPage({ lang }: { lang: Language }) {
 export function LocalizedVisionPage({ lang, slug }: { lang: Language; slug: VisionSlug }) {
   const vision = localized[lang].visions[slug];
   const labels = lang === 'en' ? { back: 'All ideas', structure: 'Structure', source: 'Original on GitHub', discussion: 'Discussion', discussionTitle: 'A hypothesis gets stronger when someone tries to disprove it.', feedback: 'Leave an argument or question', backHref: '/en/visions' } : { back: 'Alle Ideen', structure: 'Struktur', source: 'Original auf GitHub', discussion: 'Diskussion', discussionTitle: 'Eine Hypothese wird stärker, wenn jemand versucht, sie zu widerlegen.', feedback: 'Argument oder Frage hinterlassen', backHref: '/de/visions' };
-  return <ArticleDetail category={vision.category} title={vision.title} intro={vision.intro} outline={vision.outline} sections={vision.sections} source={vision.source} labels={labels} />;
+  const research = slug === 'intelligence-attractor' ? (lang === 'en' ? {
+    kicker: 'Research status', status: 'Experimental evidence in development', title: 'EXP‑001 · Independent Self-Improving Lineages',
+    description: 'The experiment will test whether functional diversity among independent software lineages with different models, languages and architectures decreases as they approach a shared performance frontier under the same binding constraints. This is a research design and infrastructure foundation, not evidence already obtained.',
+    facts: [['Test E1', 'Functional narrowing'], ['Test E2', 'Origin attenuation'], ['Protocol', 'Design draft'], ['IAH Arena', 'Foundation scaffold · 7 tests']] as Array<[string, string]>,
+    links: [
+      { label: 'IAH Arena code', href: 'https://github.com/vitalii87/thought-traces/tree/2e04be2/arena' },
+      { label: 'EXP‑001 protocol', href: 'https://github.com/vitalii87/thought-traces/blob/2e04be2/experiments/001-independent-self-improving-lineages/README.md' },
+      { label: 'Experimental programme', href: 'https://github.com/vitalii87/thought-traces/blob/2e04be2/ideas/experimental-program.md' },
+    ],
+  } : {
+    kicker: 'Forschungsstatus', status: 'Experimenteller Nachweis in Entwicklung', title: 'EXP‑001 · Unabhängige selbstverbessernde Entwicklungslinien',
+    description: 'Das Experiment wird prüfen, ob die funktionale Vielfalt unabhängiger Softwarelinien mit unterschiedlichen Modellen, Sprachen und Architekturen abnimmt, wenn sie sich unter denselben bindenden Einschränkungen einer gemeinsamen Leistungsgrenze nähern. Dies ist ein Forschungsdesign und eine infrastrukturelle Grundlage, noch kein erbrachter Nachweis.',
+    facts: [['Test E1', 'Funktionale Verengung'], ['Test E2', 'Abschwächung des Ursprungseinflusses'], ['Protokoll', 'Entwurfsphase'], ['IAH Arena', 'Grundgerüst · 7 Tests']] as Array<[string, string]>,
+    links: [
+      { label: 'Code der IAH Arena', href: 'https://github.com/vitalii87/thought-traces/tree/2e04be2/arena' },
+      { label: 'Protokoll EXP‑001', href: 'https://github.com/vitalii87/thought-traces/blob/2e04be2/experiments/001-independent-self-improving-lineages/README.md' },
+      { label: 'Experimentelles Programm', href: 'https://github.com/vitalii87/thought-traces/blob/2e04be2/ideas/experimental-program.md' },
+    ],
+  }) : undefined;
+  return <ArticleDetail category={vision.category} title={vision.title} intro={vision.intro} outline={vision.outline} sections={vision.sections} source={vision.source} labels={labels} research={research} />;
 }
 
 export function LocalizedAboutPage({ lang }: { lang: Language }) {
