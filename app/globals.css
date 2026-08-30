@@ -101,6 +101,10 @@ a { color: inherit; text-decoration: none; }
 .factGrid dd { margin: 0; font-size: 14px; }
 .projectMedia { min-height: 620px; display: grid; place-items: center; border: 1px dashed rgba(23,24,20,.35); background: linear-gradient(135deg, rgba(217,255,71,.45), rgba(185,205,243,.5)); color: rgba(23,24,20,.55); font: 10px var(--font-geist-mono); text-transform: uppercase; text-align: center; }
 .projectShowcase { min-height: 540px; padding: 48px; display: flex; align-items: end; justify-content: space-between; background: radial-gradient(circle at 18% 20%, var(--acid), transparent 31%), radial-gradient(circle at 80% 72%, var(--blue), transparent 34%), var(--ink); color: var(--white); overflow: hidden; }
+.projectVideo { margin-block: 0; padding: 0; background: #050505; border: 1px solid rgba(23,24,20,.3); }
+.projectVideo video { display: block; width: 100%; max-height: 720px; object-fit: contain; background: #050505; }
+.projectVideo figcaption { display: flex; align-items: center; justify-content: space-between; gap: 35px; padding: 18px 22px; background: var(--ink); color: var(--white); }
+.projectVideo figcaption > span:last-child { max-width: 650px; color: #b9bbb4; font-size: 13px; line-height: 1.45; text-align: right; }
 .showcaseMark { font-size: clamp(150px, 28vw, 390px); line-height: .65; letter-spacing: -.13em; font-weight: 700; opacity: .94; }
 .showcaseSignals { display: grid; min-width: 310px; border-top: 1px solid rgba(255,255,255,.35); }
 .showcaseSignals span { display: grid; grid-template-columns: 38px 1fr; gap: 14px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.25); font-size: 13px; }
@@ -202,6 +206,8 @@ a { color: inherit; text-decoration: none; }
   .factGrid div:nth-child(3), .factGrid div:nth-child(4) { border-top: 1px solid var(--line); }
   .projectMedia { min-height: 360px; }
   .projectShowcase { min-height: 520px; padding: 28px; display: grid; align-content: space-between; }
+  .projectVideo figcaption { display: grid; gap: 10px; }
+  .projectVideo figcaption > span:last-child { text-align: left; }
   .showcaseMark { font-size: 180px; }
   .showcaseSignals { min-width: 0; width: 100%; }
   .storyGrid { grid-template-columns: 1fr; padding: 90px 0; }

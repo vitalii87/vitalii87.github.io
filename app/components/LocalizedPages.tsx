@@ -26,7 +26,9 @@ export function LocalizedProjectsPage({ lang }: { lang: Language }) {
 
 export function LocalizedProjectPage({ lang, slug }: { lang: Language; slug: ProjectSlug }) {
   const project = localized[lang].projects[slug];
-  return <ProjectDetail eyebrow={project.eyebrow} title={project.title} lead={project.description} mark={project.mark} facts={project.facts as Array<[string, string]>} signal={project.signal} sections={project.sections} links={project.links as Array<{ label: string; href: string; primary?: boolean }>} materialsTitle={project.materialsTitle} materialsNote={project.materialsNote} backLabel={lang === 'en' ? 'All projects' : 'Alle Projekte'} materialsLabel={lang === 'en' ? 'Materials' : 'Materialien'} />;
+  const videoLabel = lang === 'en' ? 'Visualisation of thought in the swarm' : 'Visualisierung des Denkprozesses im Schwarm';
+  const videoCaption = lang === 'en' ? 'A conceptual view of nodes exchanging signals, forming connections and converging on a shared solution.' : 'Eine konzeptionelle Darstellung, wie Knoten Signale austauschen, Verbindungen bilden und sich einer gemeinsamen Lösung annähern.';
+  return <ProjectDetail eyebrow={project.eyebrow} title={project.title} lead={project.description} mark={project.mark} facts={project.facts as Array<[string, string]>} signal={project.signal} sections={project.sections} links={project.links as Array<{ label: string; href: string; primary?: boolean }>} materialsTitle={project.materialsTitle} materialsNote={project.materialsNote} backLabel={lang === 'en' ? 'All projects' : 'Alle Projekte'} materialsLabel={lang === 'en' ? 'Materials' : 'Materialien'} videoSrc={slug === 'swagri' ? '/swagri-thinking.mp4' : undefined} videoLabel={slug === 'swagri' ? videoLabel : undefined} videoCaption={slug === 'swagri' ? videoCaption : undefined} />;
 }
 
 export function LocalizedVisionsPage({ lang }: { lang: Language }) {

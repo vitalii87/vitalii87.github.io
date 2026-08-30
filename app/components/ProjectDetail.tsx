@@ -3,11 +3,12 @@ import Link from 'next/link';
 type ProjectLink = { label: string; href: string; primary?: boolean };
 type ProjectSection = { index: string; kicker: string; title: string; body: string };
 
-export function ProjectDetail({ eyebrow, title, lead, mark, facts, signal, sections, links, materialsTitle = 'Відкрити проєкт', materialsNote, backLabel = 'Усі проєкти', materialsLabel = 'Матеріали' }: {
+export function ProjectDetail({ eyebrow, title, lead, mark, facts, signal, sections, links, materialsTitle = 'Відкрити проєкт', materialsNote, backLabel = 'Усі проєкти', materialsLabel = 'Матеріали', videoSrc, videoLabel, videoCaption }: {
   eyebrow: string; title: string; lead: string; mark: string;
   facts: Array<[string, string]>; signal: string[]; sections: ProjectSection[]; links: ProjectLink[];
   materialsTitle?: string; materialsNote?: string;
   backLabel?: string; materialsLabel?: string;
+  videoSrc?: string; videoLabel?: string; videoCaption?: string;
 }) {
   return (
     <main className="pageMain">
@@ -15,9 +16,12 @@ export function ProjectDetail({ eyebrow, title, lead, mark, facts, signal, secti
         <Link className="backLink" href={backLabel === 'All projects' ? '/en/projects' : backLabel === 'Alle Projekte' ? '/de/projects' : '/projects'}>← {backLabel}</Link><p className="kicker">{eyebrow}</p><h1>{title}</h1><p className="pageLead">{lead}</p>
         <dl className="factGrid">{facts.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
       </section>
-      <section className="projectShowcase shell" aria-label={`Ключові характеристики ${title}`}>
+      {videoSrc ? <figure className="projectVideo shell">
+        <video src={videoSrc} autoPlay loop muted playsInline controls preload="metadata" aria-label={videoLabel} />
+        <figcaption><span className="kicker">{videoLabel}</span><span>{videoCaption}</span></figcaption>
+      </figure> : <section className="projectShowcase shell" aria-label={`Ключові характеристики ${title}`}>
         <span className="showcaseMark">{mark}</span><div className="showcaseSignals">{signal.map((item, index) => <span key={item}><b>0{index + 1}</b>{item}</span>)}</div>
-      </section>
+      </section>}
       <section className="storyGrid shell">
         {sections.map((section) => <div className="storyContents" key={section.index}><p className="kicker">{section.index} / {section.kicker}</p><div><h2>{section.title}</h2><p>{section.body}</p></div></div>)}
       </section>
