@@ -1,39 +1,25 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'Проєкти — V/01',
-  description: 'Каталог проєктів, продуктів та експериментів.',
-};
+export const metadata: Metadata = { title: 'Проєкти — V/01', description: 'Програмні продукти й технічні експерименти Віталія Жиляєва.' };
 
-const placeholders = [
-  { number: '01', state: 'Основний проєкт', tone: 'acid' },
-  { number: '02', state: 'Наступний проєкт', tone: 'blue' },
-  { number: '03', state: 'Архів / експеримент', tone: 'paper' },
+const projects = [
+  { number: '01', state: 'Активний · v0.11.2', tone: 'acid', title: 'JobCompass', description: 'Локальна Windows-програма, яка шукає вакансії, пояснює їхню релевантність і допомагає вести весь шлях заявки.', href: '/projects/jobcompass', signal: ['LOCAL FIRST', '0—100%', 'UA · EN · DE'] },
+  { number: '02', state: 'Відкритий архів · 2026', tone: 'blue', title: 'Thought Traces', description: 'Публічний журнал гіпотез і нотаток про інтелект, оптимізацію, технології та можливі майбутні системи.', href: '/projects/thought-traces', signal: ['3 HYPOTHESES', 'OPEN TEXTS', 'EVOLVING'] },
+  { number: '03', state: 'Навчальний проєкт', tone: 'paper', title: 'QA Automation', description: 'Практичний каркас автоматизованих браузерних тестів на Python із Playwright, Pytest і Page Object Pattern.', href: '/projects/qa-automation', signal: ['PLAYWRIGHT', 'PYTEST', 'PAGE OBJECT'] },
 ];
 
 export default function ProjectsPage() {
   return (
     <main className="pageMain">
-      <section className="pageHero shell">
-        <p className="kicker">01 / Проєкти</p>
-        <h1>Робота,<br /><span>яку можна відкрити.</span></h1>
-        <p className="pageLead">Тут буде каталог проєктів з коротким описом, статусом і прямим переходом до деталей.</p>
-      </section>
-
-      <section className="shell projectCatalog" aria-label="Шаблони карток проєктів">
-        {placeholders.map((item, index) => (
-          <Link className={`catalogCard ${item.tone}`} href={index === 0 ? '/projects/project-template' : '/projects/project-template'} key={item.number}>
-            <div className="catalogMeta">
-              <span>{item.number}</span>
-              <span>{item.state}</span>
-            </div>
-            <div className="emptyVisual" aria-hidden="true"><span>Зображення / відео</span></div>
-            <div className="catalogCopy">
-              <h2>Назва проєкту</h2>
-              <p>Коротка теза про проблему, підхід та цінність результату.</p>
-            </div>
-            <span className="catalogLink">Відкрити шаблон <span aria-hidden="true">↗</span></span>
+      <section className="pageHero shell"><p className="kicker">01 / Проєкти</p><h1>Робота,<br /><span>яку можна відкрити.</span></h1><p className="pageLead">Продукти й експерименти з відкритим кодом, чесним статусом і прямими посиланнями на матеріали.</p></section>
+      <section className="shell projectCatalog" aria-label="Каталог проєктів">
+        {projects.map((project) => (
+          <Link className={`catalogCard ${project.tone}`} href={project.href} key={project.number}>
+            <div className="catalogMeta"><span>{project.number}</span><span>{project.state}</span></div>
+            <div className="projectSignal" aria-hidden="true"><strong>{project.title.slice(0, 2).toUpperCase()}</strong><div>{project.signal.map((item) => <span key={item}>{item}</span>)}</div></div>
+            <div className="catalogCopy"><h2>{project.title}</h2><p>{project.description}</p></div>
+            <span className="catalogLink">Детальніше <span aria-hidden="true">↗</span></span>
           </Link>
         ))}
       </section>

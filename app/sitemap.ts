@@ -5,9 +5,13 @@ export const dynamic = 'force-static';
 const routes = [
   '',
   '/projects/',
-  '/projects/project-template/',
+  '/projects/jobcompass/',
+  '/projects/thought-traces/',
+  '/projects/qa-automation/',
   '/visions/',
-  '/visions/article-template/',
+  '/visions/intelligence-attractor/',
+  '/visions/salt-sensitivity/',
+  '/visions/relational-narrowing/',
   '/about/',
 ];
 
