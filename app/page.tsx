@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const sections = [
-  { number: '01', title: 'Проєкти', description: 'Робочі продукти й технічні експерименти: від локального пошуку вакансій до автоматизації тестування.', href: '/projects', accent: 'acid' },
+  { number: '01', title: 'Проєкти', description: 'Пріоритетні розробки: розподілені обчислення, ройовий AI та local-first асистенти.', href: '/projects', accent: 'acid' },
   { number: '02', title: 'Погляди', description: 'Гіпотези про інтелект, оптимізацію, технології та можливі траєкторії майбутнього.', href: '/visions', accent: 'blue' },
   { number: '03', title: 'Про мене', description: 'Контекст роботи, спосіб мислення та відкритий канал для контакту й дискусії.', href: '/about', accent: 'paper' },
 ];
