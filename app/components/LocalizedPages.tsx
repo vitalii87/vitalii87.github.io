@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { localized, projectSlugs, visionSlugs, type Language } from '../content/localized';
 import { ArticleDetail } from './ArticleDetail';
 import { ProjectDetail } from './ProjectDetail';
+import { OriginStory } from './OriginStory';
 
 type ProjectSlug = typeof projectSlugs[number];
 type VisionSlug = typeof visionSlugs[number];
@@ -63,5 +64,5 @@ export function LocalizedVisionPage({ lang, slug }: { lang: Language; slug: Visi
 
 export function LocalizedAboutPage({ lang }: { lang: Language }) {
   const page = localized[lang].about;
-  return <main className="pageMain"><section className="aboutHero shell"><p className="kicker">{page.kicker}</p><h1>{page.name}<br /><span>{page.thesis}</span></h1></section><section className="aboutLayout shell"><div className="identityPanel"><span className="identityInitials">VZ</span><div><p>INDEPENDENT BUILDER</p><p>GITHUB / VITALII87</p><p>SINCE / 2016</p></div></div><div className="aboutCopy"><p className="kicker">{page.short}</p><h2>{page.title}</h2>{page.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}<div className="aboutFacts">{page.facts.map((fact) => <span key={fact}>{fact}</span>)}</div></div></section><section className="contactPanel shell" id="contact"><p className="kicker">{page.contact}</p><h2>{page.contactTitle.split('\n').map((part, index) => <span key={part}>{part}{index === 0 && <br />}</span>)}</h2><div className="contactLinks"><a href="https://github.com/vitalii87" target="_blank" rel="noreferrer">{page.github} ↗</a><a href="https://github.com/vitalii87/thought-traces/issues" target="_blank" rel="noreferrer">{page.discuss} ↗</a></div></section></main>;
+  return <main className="pageMain"><section className="aboutHero shell"><p className="kicker">{page.kicker}</p><h1>{page.name}<br /><span>{page.thesis}</span></h1></section><section className="aboutLayout shell"><div className="identityPanel"><span className="identityInitials">VZ</span><div><p>INDEPENDENT BUILDER</p><p>GITHUB / VITALII87</p><p>SINCE / 2016</p></div></div><div className="aboutCopy"><p className="kicker">{page.short}</p><h2>{page.title}</h2>{page.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}<div className="aboutFacts">{page.facts.map((fact) => <span key={fact}>{fact}</span>)}</div></div></section><OriginStory lang={lang} /><section className="contactPanel shell" id="contact"><p className="kicker">{page.contact}</p><h2>{page.contactTitle.split('\n').map((part, index) => <span key={part}>{part}{index === 0 && <br />}</span>)}</h2><div className="contactLinks"><a href="https://github.com/vitalii87" target="_blank" rel="noreferrer">{page.github} ↗</a><a href="https://github.com/vitalii87/thought-traces/issues" target="_blank" rel="noreferrer">{page.discuss} ↗</a></div></section></main>;
 }

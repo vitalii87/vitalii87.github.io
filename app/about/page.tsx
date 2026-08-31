@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { OriginStory } from '../components/OriginStory';
 
 export const metadata: Metadata = { title: 'Про мене — V/01', description: 'Віталій Жиляєв — незалежні програмні проєкти, системне мислення й відкриті гіпотези.' };
 
@@ -19,6 +20,7 @@ export default function AboutPage() {
           <div className="aboutFacts"><span>Програмні продукти</span><span>QA та автоматизація</span><span>AI і системи</span><span>Відкриті гіпотези</span></div>
         </div>
       </section>
+      <OriginStory lang="uk" />
       <section className="contactPanel shell" id="contact">
         <p className="kicker">Контакт і фідбек</p><h2>Є аргумент,<br />ідея або проєкт?</h2>
         <div className="contactLinks"><a href="https://github.com/vitalii87" target="_blank" rel="noreferrer">Профіль GitHub ↗</a><a href="https://github.com/vitalii87/thought-traces/issues" target="_blank" rel="noreferrer">Дискусія про теорії ↗</a></div>
