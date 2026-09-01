@@ -76,29 +76,31 @@ const stories = {
 export function OriginStory({ lang }: { lang: OriginLanguage }) {
   const story = stories[lang];
   return <section className="originStory">
-    <div className="originStoryLayout shell">
-      <div className="originStoryCopy">
+    <div className="originChapter shell">
+      <div className="originChapterIntro">
         <p className="kicker">{story.kicker}</p>
-        <h2>{story.title}</h2>
-        {story.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-        <div className="trajectoryCopy">
-          <p className="kicker">{story.trajectoryKicker}</p>
-          <h3>{story.trajectoryTitle}</h3>
-          {story.trajectoryParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-        </div>
+        <div className="originText"><h2>{story.title}</h2>{story.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
       </div>
-      <aside className="originGallery" aria-label={story.gallery}>
+      <div className="originGallery" aria-label={story.gallery}>
         <p className="kicker">{story.gallery}</p>
-        <div className="originFrames">{frames.map((src, index) => <figure key={src}>
+        <div className="originFrames filmFrames">{frames.map((src, index) => <figure key={src}>
           <div className="originFrame"><img src={src} alt={story.labels[index]} loading="lazy" /></div>
           <figcaption><span>{String(index + 1).padStart(2, '0')}</span><span>{story.labels[index]}</span></figcaption>
         </figure>)}</div>
-        <div className="galleryTurn"><span>SCIENCE FICTION</span><span aria-hidden="true">↓</span><strong>SYSTEMS IN PRACTICE</strong></div>
+      </div>
+    </div>
+    <div className="galleryTurn shell"><span>SCIENCE FICTION</span><span aria-hidden="true">↓</span><strong>SYSTEMS IN PRACTICE</strong></div>
+    <div className="originChapter originPractice shell">
+      <div className="originChapterIntro">
+        <p className="kicker">{story.trajectoryKicker}</p>
+        <div className="originText"><h3>{story.trajectoryTitle}</h3>{story.trajectoryParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+      </div>
+      <div className="originGallery" aria-label={story.trajectoryTitle}>
         <div className="originFrames practiceFrames">{trajectoryFrames.map((src, index) => <figure key={src}>
           <div className="originFrame"><img src={src} alt={story.trajectoryLabels[index]} loading="lazy" /></div>
           <figcaption><span>{String(index + 9).padStart(2, '0')}</span><span>{story.trajectoryLabels[index]}</span></figcaption>
         </figure>)}</div>
-      </aside>
+      </div>
     </div>
   </section>;
 }
