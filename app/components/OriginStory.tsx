@@ -30,6 +30,7 @@ const stories = {
       'Одне з постійних питань у моїх проєктах: чи повинен інтелект узагалі жити всередині однієї моделі? Мене особливо цікавлять розподілені системи — різнорідні агенти, пристрої й процеси, здатні координуватися, навчатися та поступово формувати щось більше за суму окремих частин.',
     ],
     trajectoryLabels: ['Агенти', 'Розподілений інтелект', 'Обчислювальна основа', 'Автоматизовані системи', 'Межа дослідження'],
+    trajectoryGallery: 'Системи на практиці',
   },
   en: {
     kicker: 'Forming the vision · 1980—2000',
@@ -50,6 +51,7 @@ const stories = {
       'A recurring question in my projects is whether intelligence has to live inside a single model at all. I am especially interested in distributed systems: heterogeneous agents, devices and processes that can coordinate, learn and gradually form something larger than their individual parts.',
     ],
     trajectoryLabels: ['Agents', 'Distributed intelligence', 'Computational substrate', 'Automated systems', 'Research frontier'],
+    trajectoryGallery: 'Systems in practice',
   },
   de: {
     kicker: 'Wie die Vision entstand · 1980—2000',
@@ -70,6 +72,7 @@ const stories = {
       'Eine wiederkehrende Frage in meinen Projekten ist, ob Intelligenz überhaupt in einem einzigen Modell leben muss. Besonders interessieren mich verteilte Systeme: heterogene Agenten, Geräte und Prozesse, die sich koordinieren, lernen und schrittweise etwas bilden können, das größer ist als ihre einzelnen Teile.',
     ],
     trajectoryLabels: ['Agenten', 'Verteilte Intelligenz', 'Rechengrundlage', 'Automatisierte Systeme', 'Forschungsgrenze'],
+    trajectoryGallery: 'Systeme in der Praxis',
   },
 };
 
@@ -78,27 +81,38 @@ export function OriginStory({ lang }: { lang: OriginLanguage }) {
   return <section className="originStory">
     <div className="originChapter shell">
       <div className="originChapterIntro">
-        <p className="kicker">{story.kicker}</p>
-        <div className="originText"><h2>{story.title}</h2>{story.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+        <div className="originText"><p className="kicker">{story.kicker}</p><h2>{story.title}</h2>{story.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+        <div className="originSideGallery" aria-label={story.gallery}>
+          <p className="originGalleryLabel">{story.gallery}</p>
+          <div className="originFrames originSideFrames">{frames.slice(0, 2).map((src, index) => <figure key={src}>
+            <div className="originFrame"><img src={src} alt={story.labels[index]} loading="lazy" /></div>
+            <figcaption><span>{String(index + 1).padStart(2, '0')}</span><span>{story.labels[index]}</span></figcaption>
+          </figure>)}</div>
+        </div>
       </div>
-      <div className="originGallery" aria-label={story.gallery}>
-        <p className="kicker">{story.gallery}</p>
-        <div className="originFrames filmFrames">{frames.map((src, index) => <figure key={src}>
-          <div className="originFrame"><img src={src} alt={story.labels[index]} loading="lazy" /></div>
-          <figcaption><span>{String(index + 1).padStart(2, '0')}</span><span>{story.labels[index]}</span></figcaption>
+      <div className="originBottomGallery" aria-label={story.gallery}>
+        <div className="originFrames filmFrames">{frames.slice(2).map((src, index) => <figure key={src}>
+          <div className="originFrame"><img src={src} alt={story.labels[index + 2]} loading="lazy" /></div>
+          <figcaption><span>{String(index + 3).padStart(2, '0')}</span><span>{story.labels[index + 2]}</span></figcaption>
         </figure>)}</div>
       </div>
     </div>
     <div className="galleryTurn shell"><span>SCIENCE FICTION</span><span aria-hidden="true">↓</span><strong>SYSTEMS IN PRACTICE</strong></div>
     <div className="originChapter originPractice shell">
       <div className="originChapterIntro">
-        <p className="kicker">{story.trajectoryKicker}</p>
-        <div className="originText"><h3>{story.trajectoryTitle}</h3>{story.trajectoryParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+        <div className="originText"><p className="kicker">{story.trajectoryKicker}</p><h3>{story.trajectoryTitle}</h3>{story.trajectoryParagraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+        <div className="originSideGallery" aria-label={story.trajectoryGallery}>
+          <p className="originGalleryLabel">{story.trajectoryGallery}</p>
+          <div className="originFrames originSideFrames practiceSideFrames">{trajectoryFrames.slice(0, 2).map((src, index) => <figure key={src}>
+            <div className="originFrame"><img src={src} alt={story.trajectoryLabels[index]} loading="lazy" /></div>
+            <figcaption><span>{String(index + 9).padStart(2, '0')}</span><span>{story.trajectoryLabels[index]}</span></figcaption>
+          </figure>)}</div>
+        </div>
       </div>
-      <div className="originGallery" aria-label={story.trajectoryTitle}>
-        <div className="originFrames practiceFrames">{trajectoryFrames.map((src, index) => <figure key={src}>
-          <div className="originFrame"><img src={src} alt={story.trajectoryLabels[index]} loading="lazy" /></div>
-          <figcaption><span>{String(index + 9).padStart(2, '0')}</span><span>{story.trajectoryLabels[index]}</span></figcaption>
+      <div className="originBottomGallery" aria-label={story.trajectoryGallery}>
+        <div className="originFrames practiceFrames">{trajectoryFrames.slice(2).map((src, index) => <figure key={src}>
+          <div className="originFrame"><img src={src} alt={story.trajectoryLabels[index + 2]} loading="lazy" /></div>
+          <figcaption><span>{String(index + 11).padStart(2, '0')}</span><span>{story.trajectoryLabels[index + 2]}</span></figcaption>
         </figure>)}</div>
       </div>
     </div>

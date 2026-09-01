@@ -182,13 +182,17 @@ a { color: inherit; text-decoration: none; }
 .aboutFacts { display: grid; grid-template-columns: 1fr 1fr; margin-top: 60px; border-top: 1px solid var(--line); }
 .aboutFacts span { padding: 22px 0; border-bottom: 1px solid var(--line); font: 11px var(--font-geist-mono); text-transform: uppercase; }
 .originStory { margin-bottom: 140px; padding: 125px 0 110px; background: var(--ink); color: var(--white); }
-.originChapterIntro { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: start; }
-.originText { min-width: 0; }
-.originText h2 { max-width: 880px; margin: 0 0 48px; font-size: clamp(52px, 6vw, 86px); line-height: .96; letter-spacing: -.06em; }
-.originText h3 { max-width: 780px; margin: 0 0 38px; font-size: clamp(42px, 5vw, 68px); line-height: 1; letter-spacing: -.05em; }
+.originChapterIntro { display: grid; grid-template-columns: 1fr 2fr; gap: 18px 50px; align-items: start; }
+.originText { min-width: 0; grid-column: 2; grid-row: 1; }
+.originText h2 { max-width: 880px; margin: 38px 0 48px; font-size: clamp(52px, 6vw, 86px); line-height: .96; letter-spacing: -.06em; }
+.originText h3 { max-width: 780px; margin: 38px 0; font-size: clamp(42px, 5vw, 68px); line-height: 1; letter-spacing: -.05em; }
 .originText > p { max-width: 730px; margin: 0 0 22px; color: #b7b9b2; font-size: 17px; line-height: 1.7; }
-.originGallery { margin-top: 75px; padding-top: 27px; border-top: 1px solid rgba(255,255,255,.22); }
+.originText > .kicker { margin: 0; color: var(--white); font-size: 10px; line-height: 1; }
+.originSideGallery { grid-column: 1; grid-row: 1; min-width: 0; padding-right: 22px; border-right: 1px solid rgba(255,255,255,.22); }
+.originGalleryLabel { margin: 0; color: #a9aba5; font: 9px var(--font-geist-mono); text-transform: uppercase; letter-spacing: .07em; }
+.originBottomGallery { margin-top: 18px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.22); }
 .originFrames { display: grid; gap: 28px 12px; margin-top: 32px; }
+.originSideFrames { grid-template-columns: 1fr; gap: 24px; margin-top: 24px; }
 .filmFrames { grid-template-columns: repeat(4, 1fr); }
 .originFrames figure { margin: 0; }
 .originFrame { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #090a09; }
@@ -201,9 +205,9 @@ a { color: inherit; text-decoration: none; }
 .galleryTurn span:nth-child(2) { color: var(--acid); }
 .galleryTurn strong { grid-column: 1 / -1; color: var(--acid); font-size: 13px; font-weight: 500; }
 .originPractice { margin-top: 110px; }
-.practiceFrames { grid-template-columns: repeat(2, 1fr); margin-top: 0; }
-.practiceFrames figure:last-child { grid-column: 1 / -1; }
+.practiceFrames { grid-template-columns: repeat(3, 1fr); margin-top: 0; }
 .practiceFrames .originFrame { aspect-ratio: 3 / 1; }
+.practiceSideFrames .originFrame { aspect-ratio: 16 / 10; }
 .practiceFrames .originFrame::after { background: linear-gradient(135deg, rgba(185,205,243,.1), rgba(217,255,71,.14)); }
 .practiceFrames .originFrame img { filter: grayscale(.22) contrast(1.06) brightness(.88); }
 .contactPanel { margin-bottom: 140px; padding: 65px; background: var(--acid); }
@@ -272,13 +276,15 @@ a { color: inherit; text-decoration: none; }
   .aboutLayout { gap: 50px; padding-bottom: 95px; }
   .originStory { margin-bottom: 95px; padding: 85px 0 75px; }
   .originChapterIntro { grid-template-columns: 1fr; gap: 32px; }
+  .originText { grid-column: 1; grid-row: 1; }
+  .originSideGallery { grid-column: 1; grid-row: 2; padding: 28px 0 0; border-right: 0; border-top: 1px solid rgba(255,255,255,.22); }
+  .originSideFrames { grid-template-columns: 1fr 1fr; gap: 24px 10px; }
   .originText h2 { margin-bottom: 38px; }
-  .originGallery { margin-top: 58px; }
+  .originBottomGallery { margin-top: 24px; }
   .filmFrames { grid-template-columns: 1fr 1fr; gap: 24px 10px; }
   .galleryTurn { margin-top: 85px; }
   .originPractice { margin-top: 80px; }
   .practiceFrames { grid-template-columns: 1fr; gap: 24px; }
-  .practiceFrames figure:last-child { grid-column: auto; }
   .practiceFrames .originFrame { aspect-ratio: 16 / 8; }
   .portraitPlaceholder { min-height: 440px; }
   .identityPanel { min-height: 440px; }
