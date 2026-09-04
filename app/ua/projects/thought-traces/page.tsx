@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { ProjectDetail } from '../../components/ProjectDetail';
+import { ProjectDetail } from '../../../components/ProjectDetail';
 
 export const metadata: Metadata = {
   title: 'Thought Traces — V/01', description: 'Відкритий архів гіпотез про інтелект, технології та можливі майбутні системи.',
@@ -20,7 +20,7 @@ export default function ThoughtTracesPage() {
     ]}
     links={[
       { label: 'Читати на GitHub', href: 'https://github.com/vitalii87/thought-traces', primary: true },
-      { label: 'Intelligence Attractor', href: '/visions/intelligence-attractor' },
+      { label: 'Intelligence Attractor', href: '/ua/visions/intelligence-attractor' },
     ]}
   />;
 }

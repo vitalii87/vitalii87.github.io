@@ -12,17 +12,17 @@ const copy = {
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const language = pathname.startsWith('/en') ? 'en' : pathname.startsWith('/de') ? 'de' : 'uk';
+  const language = pathname.startsWith('/ua') ? 'uk' : pathname.startsWith('/de') ? 'de' : 'en';
   useEffect(() => { document.documentElement.lang = language; }, [language]);
-  const prefix = language === 'uk' ? '' : `/${language}`;
-  const pathWithoutLanguage = pathname.replace(/^\/(en|de)(?=\/|$)/, '') || '/';
+  const prefix = language === 'en' ? '' : language === 'uk' ? '/ua' : '/de';
+  const pathWithoutLanguage = pathname.replace(/^\/(en|de|ua)(?=\/|$)/, '') || '/';
   const navigation = [
     { href: prefix || '/', label: copy[language].home },
     { href: `${prefix}/projects`, label: copy[language].projects },
     { href: `${prefix}/visions`, label: copy[language].visions },
     { href: `${prefix}/about`, label: copy[language].about },
   ];
-  const localizedHref = (nextLanguage: 'en' | 'de') => `/${nextLanguage}${pathWithoutLanguage === '/' ? '' : pathWithoutLanguage}`;
+  const localizedHref = (nextLanguage: 'en' | 'de') => `${nextLanguage === 'en' ? '' : '/de'}${pathWithoutLanguage === '/' ? '/' : pathWithoutLanguage}`;
 
   return (
     <header className="siteHeader">

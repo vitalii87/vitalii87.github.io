@@ -3,17 +3,17 @@ import Link from 'next/link';
 type ProjectLink = { label: string; href: string; primary?: boolean };
 type ProjectSection = { index: string; kicker: string; title: string; body: string };
 
-export function ProjectDetail({ eyebrow, title, lead, mark, facts, signal, sections, links, materialsTitle = 'Відкрити проєкт', materialsNote, backLabel = 'Усі проєкти', materialsLabel = 'Матеріали', videoSrc, videoLabel, videoCaption }: {
+export function ProjectDetail({ eyebrow, title, lead, mark, facts, signal, sections, links, materialsTitle = 'Відкрити проєкт', materialsNote, backLabel = 'Усі проєкти', backHref, materialsLabel = 'Матеріали', videoSrc, videoLabel, videoCaption }: {
   eyebrow: string; title: string; lead: string; mark: string;
   facts: Array<[string, string]>; signal: string[]; sections: ProjectSection[]; links: ProjectLink[];
   materialsTitle?: string; materialsNote?: string;
-  backLabel?: string; materialsLabel?: string;
+  backLabel?: string; backHref?: string; materialsLabel?: string;
   videoSrc?: string; videoLabel?: string; videoCaption?: string;
 }) {
   return (
     <main className="pageMain">
       <section className="projectDetailHero shell">
-        <Link className="backLink" href={backLabel === 'All projects' ? '/en/projects' : backLabel === 'Alle Projekte' ? '/de/projects' : '/projects'}>← {backLabel}</Link><p className="kicker">{eyebrow}</p><h1>{title}</h1><p className="pageLead">{lead}</p>
+        <Link className="backLink" href={backHref ?? (backLabel === 'All projects' ? '/projects' : backLabel === 'Alle Projekte' ? '/de/projects' : '/ua/projects')}>← {backLabel}</Link><p className="kicker">{eyebrow}</p><h1>{title}</h1><p className="pageLead">{lead}</p>
         <dl className="factGrid">{facts.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
       </section>
       {videoSrc ? <figure className="projectVideo shell">

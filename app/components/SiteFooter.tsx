@@ -5,8 +5,8 @@ import { usePathname } from 'next/navigation';
 
 export function SiteFooter() {
   const pathname = usePathname();
-  const language = pathname.startsWith('/en') ? 'en' : pathname.startsWith('/de') ? 'de' : 'uk';
-  const prefix = language === 'uk' ? '' : `/${language}`;
+  const language = pathname.startsWith('/ua') ? 'uk' : pathname.startsWith('/de') ? 'de' : 'en';
+  const prefix = language === 'en' ? '' : language === 'uk' ? '/ua' : '/de';
   const text = language === 'en'
     ? { platform: 'Vitalii Zhyliaiev · V/01', lead: <>Projects, hypotheses<br />and open questions.</>, home: 'Back to top' }
     : language === 'de'

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { ProjectDetail } from '../../components/ProjectDetail';
+import { ProjectDetail } from '../../../components/ProjectDetail';
 
 export const metadata: Metadata = {
   title: 'QA Automation — V/01', description: 'Навчальний проєкт автоматизації браузерних тестів із Playwright і Pytest.',

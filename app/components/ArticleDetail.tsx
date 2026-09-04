@@ -16,7 +16,7 @@ export function ArticleDetail({ category, title, intro, outline, sections, sourc
   labels?: { back: string; structure: string; source: string; discussion: string; discussionTitle: string; feedback: string; backHref: string };
   research?: ResearchPanel;
 }) {
-  const text = labels ?? { back: 'Усі погляди', structure: 'Структура', source: 'Оригінал на GitHub', discussion: 'Дискусія', discussionTitle: 'Гіпотеза стає сильнішою, коли її намагаються спростувати.', feedback: 'Залишити аргумент або запитання', backHref: '/visions' };
+  const text = labels ?? { back: 'Усі погляди', structure: 'Структура', source: 'Оригінал на GitHub', discussion: 'Дискусія', discussionTitle: 'Гіпотеза стає сильнішою, коли її намагаються спростувати.', feedback: 'Залишити аргумент або запитання', backHref: '/ua/visions' };
   return (
     <main className="articlePage">
       <header className="articleHeader shell"><Link className="backLink" href={text.backHref}>← {text.back}</Link><p className="kicker">{category}</p><h1>{title}</h1><p>{intro}</p></header>

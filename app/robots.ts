@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://vitalii87.github.io/sitemap.xml',
+    sitemap: 'https://zhyliaiev.eu/sitemap.xml',
   };
 }
