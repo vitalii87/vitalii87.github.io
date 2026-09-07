@@ -9,17 +9,40 @@ type ResearchPanel = {
   links: Array<{ label: string; href: string }>;
 };
 
-export function ArticleDetail({ category, title, intro, outline, sections, source, labels, research }: {
+type PublicationPanel = {
+  kicker: string;
+  status: string;
+  title: string;
+  meta: string;
+  description: string;
+  pageLabel: string;
+  pdfLabel: string;
+  zenodoLabel: string;
+};
+
+export function ArticleDetail({ category, title, intro, outline, sections, source, labels, research, publication }: {
   category: string; title: string; intro: string; outline: string[];
   sections: Array<{ title: string; paragraphs: string[]; quote?: string }>;
   source: string;
   labels?: { back: string; structure: string; source: string; discussion: string; discussionTitle: string; feedback: string; backHref: string };
   research?: ResearchPanel;
+  publication?: PublicationPanel;
 }) {
   const text = labels ?? { back: 'Усі погляди', structure: 'Структура', source: 'Оригінал на GitHub', discussion: 'Дискусія', discussionTitle: 'Гіпотеза стає сильнішою, коли її намагаються спростувати.', feedback: 'Залишити аргумент або запитання', backHref: '/ua/visions' };
   return (
     <main className="articlePage">
       <header className="articleHeader shell"><Link className="backLink" href={text.backHref}>← {text.back}</Link><p className="kicker">{category}</p><h1>{title}</h1><p>{intro}</p></header>
+      {publication && <section className="publicationStrip shell" aria-labelledby="publication-title">
+        <div className="publicationStripHead"><p className="kicker">{publication.kicker}</p><span>{publication.status}</span></div>
+        <div className="publicationStripBody">
+          <div><p className="publicationMeta">{publication.meta}</p><h2 id="publication-title">{publication.title}</h2><p>{publication.description}</p></div>
+          <div className="publicationActions">
+            <Link className="primary" href="/visions/intelligence-attractor/paper/">{publication.pageLabel} →</Link>
+            <a href="/papers/intelligence-attractor-hypothesis-v0.1.pdf">{publication.pdfLabel} ↓</a>
+            <a href="https://doi.org/10.5281/zenodo.22556018" target="_blank" rel="noreferrer">{publication.zenodoLabel} ↗</a>
+          </div>
+        </div>
+      </section>}
       <article className="articleBody shell">
         <aside><p className="kicker">{text.structure}</p><ol>{outline.map((item) => <li key={item}>{item}</li>)}</ol><a className="sourceLink" href={source} target="_blank" rel="noreferrer">{text.source} ↗</a></aside>
         <div>{sections.map((section) => <section key={section.title}><h2>{section.title}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{section.quote && <blockquote>{section.quote}</blockquote>}</section>)}</div>

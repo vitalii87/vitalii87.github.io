@@ -76,7 +76,20 @@ export function LocalizedVisionPage({ lang, slug }: { lang: Language; slug: Visi
       { label: 'Experimentelles Programm', href: 'https://github.com/vitalii87/thought-traces/blob/2e04be2/ideas/experimental-program.md' },
     ],
   }) : undefined;
-  return <ArticleDetail category={vision.category} title={vision.title} intro={vision.intro} outline={vision.outline} sections={vision.sections} source={vision.source} labels={labels} research={research} />;
+  const publication = slug === 'intelligence-attractor' ? (lang === 'en' ? {
+    kicker: 'Published work', status: 'Preprint · v0.1',
+    title: 'Independent Convergence Under Shared Reality Constraints',
+    meta: 'Vitalii Zhyliaiev · 7 September 2026 · DOI 10.5281/zenodo.22556018',
+    description: 'The complete 20-page formulation of the Intelligence Attractor Hypothesis, including Weak and Strong IAH, origin attenuation, recursive architectural optimisation, mutable system boundaries and a programme for empirical investigation.',
+    pageLabel: 'Read the publication', pdfLabel: 'Download PDF', zenodoLabel: 'Zenodo record',
+  } : {
+    kicker: 'Veröffentlichung', status: 'Preprint · v0.1',
+    title: 'Independent Convergence Under Shared Reality Constraints',
+    meta: 'Vitalii Zhyliaiev · 7. September 2026 · DOI 10.5281/zenodo.22556018',
+    description: 'Die vollständige 20-seitige Formulierung der Intelligence Attractor Hypothesis mit Weak und Strong IAH, Origin Attenuation, rekursiver Architekturoptimierung, veränderlichen Systemgrenzen und einem empirischen Forschungsprogramm.',
+    pageLabel: 'Publikation lesen', pdfLabel: 'PDF herunterladen', zenodoLabel: 'Zenodo-Eintrag',
+  }) : undefined;
+  return <ArticleDetail category={vision.category} title={vision.title} intro={vision.intro} outline={vision.outline} sections={vision.sections} source={vision.source} labels={labels} research={research} publication={publication} />;
 }
 
 export function LocalizedAboutPage({ lang }: { lang: Language }) {

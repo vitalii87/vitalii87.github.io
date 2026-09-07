@@ -142,6 +142,16 @@ a { color: inherit; text-decoration: none; }
 .articleHeader { padding: 46px 0 90px; border-bottom: 1px solid var(--line); }
 .articleHeader h1 { max-width: 1000px; margin: 42px 0; font-size: clamp(68px, 8vw, 116px); line-height: .9; letter-spacing: -.068em; }
 .articleHeader > p:last-child { max-width: 620px; margin: 0; font-size: 20px; line-height: 1.55; }
+.publicationStrip { margin-top: 42px; padding: 32px; border: 1px solid var(--line); background: var(--paper); }
+.publicationStripHead { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+.publicationStripHead span { padding: 8px 11px; background: var(--acid); font: 10px var(--font-geist-mono); text-transform: uppercase; letter-spacing: .07em; }
+.publicationStripBody { display: grid; grid-template-columns: 1.55fr 1fr; gap: 60px; align-items: end; padding-top: 30px; }
+.publicationMeta { margin: 0 0 14px; color: var(--muted); font: 10px/1.6 var(--font-geist-mono); text-transform: uppercase; letter-spacing: .05em; }
+.publicationStripBody h2 { max-width: 720px; margin: 0 0 16px; font-size: clamp(34px, 4vw, 54px); line-height: 1; letter-spacing: -.045em; }
+.publicationStripBody > div > p:last-child { max-width: 720px; margin: 0; color: var(--muted); font-size: 16px; line-height: 1.6; }
+.publicationActions { display: grid; gap: 8px; }
+.publicationActions a { display: flex; justify-content: space-between; padding: 14px 16px; border: 1px solid var(--line); font-size: 13px; }
+.publicationActions a.primary { background: var(--ink); color: var(--white); }
 .articleBody { display: grid; grid-template-columns: 1fr 2fr; gap: 70px; padding-top: 90px; }
 .articleBody aside ol { padding-left: 18px; margin-top: 25px; color: var(--muted); line-height: 2; }
 .articleBody > div { max-width: 730px; }
@@ -168,6 +178,39 @@ a { color: inherit; text-decoration: none; }
 .discussionPanel { margin-top: 120px; padding: 58px; background: var(--blue); }
 .discussionPanel h2 { max-width: 850px; margin: 25px 0 45px; font-size: clamp(42px, 5vw, 67px); line-height: 1.03; letter-spacing: -.05em; }
 .discussionPanel a { display: inline-block; padding-bottom: 4px; border-bottom: 1px solid var(--ink); font-size: 14px; }
+
+.paperPage { background: var(--white); padding-bottom: 140px; }
+.paperHero { padding: 46px 0 95px; }
+.paperHeroMeta { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.paperHeroMeta span { font: 10px var(--font-geist-mono); text-transform: uppercase; letter-spacing: .07em; }
+.paperHero h1 { margin: 48px 0 32px; font-size: clamp(68px, 8.3vw, 120px); line-height: .86; letter-spacing: -.07em; }
+.paperHero h1 span { color: transparent; -webkit-text-stroke: 1.4px var(--ink); }
+.paperSubtitle { max-width: 850px; margin: 0; font-size: clamp(25px, 3vw, 40px); line-height: 1.17; letter-spacing: -.035em; }
+.paperByline { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 70px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.paperByline div { padding: 20px 20px 20px 0; border-right: 1px solid var(--line); }
+.paperByline div:not(:first-child) { padding-left: 20px; }
+.paperByline div:last-child { border-right: 0; }
+.paperByline span { display: block; margin-bottom: 14px; color: var(--muted); font: 10px var(--font-geist-mono); text-transform: uppercase; }
+.paperByline strong, .paperByline a { font-size: 14px; font-weight: 500; }
+.paperActions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+.paperActions a { padding: 14px 18px; border: 1px solid var(--ink); font-size: 13px; }
+.paperActions a.primary { background: var(--ink); color: var(--white); }
+.paperAbstract, .paperCitation { display: grid; grid-template-columns: 1fr 2fr; gap: 70px; padding-block: 100px; border-top: 1px solid var(--line); }
+.paperAbstract > div, .paperCitation > div { max-width: 760px; }
+.paperAbstract p:not(.kicker) { margin: 0 0 22px; color: #555850; font-size: 18px; line-height: 1.72; }
+.paperClaim { padding: 70px; background: var(--acid); }
+.paperClaim blockquote { max-width: 960px; margin: 38px 0 0; font-size: clamp(34px, 4.5vw, 62px); line-height: 1.08; letter-spacing: -.045em; }
+.paperContents { display: grid; grid-template-columns: 1fr 1.35fr; gap: 80px; padding-block: 120px; }
+.paperContents h2, .paperCitation h2 { margin: 28px 0 0; font-size: clamp(40px, 5vw, 67px); line-height: 1; letter-spacing: -.052em; }
+.paperContents ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.paperContents li { display: grid; grid-template-columns: 56px 1fr; gap: 20px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.paperContents li > span { font: 10px var(--font-geist-mono); }
+.paperContents h3 { margin: 0 0 8px; font-size: 21px; letter-spacing: -.025em; }
+.paperContents li p { margin: 0; color: var(--muted); line-height: 1.55; }
+.paperCitation { padding-bottom: 0; }
+.paperCitation h2 { margin-top: 0; }
+.paperCitation div > p { max-width: 720px; color: #555850; font-size: 18px; line-height: 1.7; }
+.paperCitation .paperLicense { margin-top: 35px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font: 11px/1.6 var(--font-geist-mono); text-transform: uppercase; letter-spacing: .04em; }
 
 .aboutHero { padding: 90px 0 60px; }
 .aboutLayout { display: grid; grid-template-columns: 1fr 1.15fr; gap: 80px; padding-bottom: 140px; }
@@ -265,6 +308,9 @@ a { color: inherit; text-decoration: none; }
   .themeRow { grid-template-columns: 35px 1fr auto; gap: 12px; padding: 28px 0; }
   .themeRow div > p:last-child { font-size: 13px; }
   .articleHeader h1 { font-size: clamp(56px, 16vw, 86px); }
+  .publicationStrip { padding: 24px 20px; }
+  .publicationStripHead { align-items: flex-start; flex-direction: column; }
+  .publicationStripBody { grid-template-columns: 1fr; gap: 32px; }
   .articleBody { gap: 50px; padding-top: 70px; }
   .articleBody aside { border-bottom: 1px solid var(--line); }
   .quotePlaceholder { padding: 32px; font-size: 24px; }
@@ -273,6 +319,15 @@ a { color: inherit; text-decoration: none; }
   .researchPanelHead { align-items: flex-start; flex-direction: column; }
   .researchPanelBody { grid-template-columns: 1fr; gap: 42px; padding: 42px 0; }
   .discussionPanel { margin-top: 80px; padding: 38px 26px; }
+  .paperHero { padding-bottom: 75px; }
+  .paperHeroMeta { align-items: flex-start; flex-direction: column; }
+  .paperHero h1 { font-size: clamp(52px, 15vw, 82px); }
+  .paperByline { grid-template-columns: 1fr; }
+  .paperByline div, .paperByline div:not(:first-child) { padding: 18px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .paperByline div:last-child { border-bottom: 0; }
+  .paperAbstract, .paperCitation, .paperContents { grid-template-columns: 1fr; gap: 38px; padding-block: 80px; }
+  .paperClaim { padding: 45px 25px; }
+  .paperContents li { grid-template-columns: 38px 1fr; }
   .aboutLayout { gap: 50px; padding-bottom: 95px; }
   .originStory { margin-bottom: 95px; padding: 85px 0 75px; }
   .originChapterIntro { grid-template-columns: 1fr; gap: 32px; }

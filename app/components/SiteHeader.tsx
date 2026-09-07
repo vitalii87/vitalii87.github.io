@@ -22,7 +22,12 @@ export function SiteHeader() {
     { href: `${prefix}/visions`, label: copy[language].visions },
     { href: `${prefix}/about`, label: copy[language].about },
   ];
-  const localizedHref = (nextLanguage: 'en' | 'de') => `${nextLanguage === 'en' ? '' : '/de'}${pathWithoutLanguage === '/' ? '/' : pathWithoutLanguage}`;
+  const localizedHref = (nextLanguage: 'en' | 'de') => {
+    if (pathWithoutLanguage === '/visions/intelligence-attractor/paper/' && nextLanguage === 'de') {
+      return '/de/visions/intelligence-attractor';
+    }
+    return `${nextLanguage === 'en' ? '' : '/de'}${pathWithoutLanguage === '/' ? '/' : pathWithoutLanguage}`;
+  };
 
   return (
     <header className="siteHeader">

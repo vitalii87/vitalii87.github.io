@@ -11,6 +11,7 @@ const contentPaths = [
   '/projects/jobcompass/',
   '/visions/',
   '/visions/intelligence-attractor/',
+  '/visions/intelligence-attractor/paper/',
   '/visions/salt-sensitivity/',
   '/visions/relational-narrowing/',
   '/about/',
@@ -18,16 +19,20 @@ const contentPaths = [
 
 const routes = [
   ...contentPaths,
-  ...contentPaths.map((path) => `/de${path}`),
-  ...contentPaths.map((path) => `/ua${path}`),
+  ...contentPaths.filter((path) => path !== '/visions/intelligence-attractor/paper/').map((path) => `/de${path}`),
+  ...contentPaths.filter((path) => path !== '/visions/intelligence-attractor/paper/').map((path) => `/ua${path}`),
   '/ua/projects/qa-automation/',
   '/ua/projects/thought-traces/',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((route) => ({
-    url: `https://zhyliaiev.eu${route}`,
-    changeFrequency: route === '' ? 'monthly' : 'yearly',
-    priority: route === '' ? 1 : 0.7,
-  }));
+  return routes.map((route) => {
+    const isPaper = route === '/visions/intelligence-attractor/paper/';
+    return {
+      url: `https://zhyliaiev.eu${route}`,
+      lastModified: isPaper ? new Date('2026-09-07') : undefined,
+      changeFrequency: route === '' || isPaper ? 'monthly' : 'yearly',
+      priority: route === '' ? 1 : isPaper ? 0.9 : 0.7,
+    };
+  });
 }
