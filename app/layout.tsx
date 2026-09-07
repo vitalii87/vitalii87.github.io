@@ -10,6 +10,10 @@ export const metadata: Metadata = {
   title: 'V/01 — Projects, theories and visions',
   description:
     'Vitalii Zhyliaiev’s projects, research hypotheses and perspectives on intelligence, technology and future systems.',
+  icons: {
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    shortcut: '/favicon.svg',
+  },
   openGraph: {
     title: 'V/01 — Projects, theories and visions',
     description: 'I build systems. I formulate hypotheses.',
