@@ -12,7 +12,7 @@ const contentPaths = [
   '/visions/',
   '/visions/intelligence-attractor/',
   '/visions/intelligence-attractor/paper/',
-  '/visions/salt-sensitivity/',
+  '/visions/origin-attenuation/',
   '/visions/relational-narrowing/',
   '/about/',
 ];
@@ -28,10 +28,11 @@ const routes = [
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => {
     const isPaper = route === '/visions/intelligence-attractor/paper/';
+    const isVision = route.includes('/visions/') || route.endsWith('/visions/');
     return {
       url: `https://zhyliaiev.eu${route}`,
-      lastModified: isPaper ? new Date('2026-09-07') : undefined,
-      changeFrequency: route === '' || isPaper ? 'monthly' : 'yearly',
+      lastModified: isVision ? new Date('2026-09-08') : undefined,
+      changeFrequency: route === '' || isVision ? 'monthly' : 'yearly',
       priority: route === '' ? 1 : isPaper ? 0.9 : 0.7,
     };
   });
