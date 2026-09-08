@@ -23,7 +23,7 @@ export default function AboutPage() {
       <OriginStory lang="uk" />
       <section className="contactPanel shell" id="contact">
         <p className="kicker">Контакт і фідбек</p><h2>Є аргумент,<br />ідея або проєкт?</h2>
-        <div className="contactLinks"><a href="https://github.com/vitalii87" target="_blank" rel="noreferrer">Профіль GitHub ↗</a><a href="https://github.com/vitalii87/thought-traces/issues" target="_blank" rel="noreferrer">Дискусія про теорії ↗</a></div>
+        <div className="contactLinks"><a className="contactPrimary" href="mailto:vitalzhyl@gmail.com">Написати мені <span aria-hidden="true">→</span></a><a href="https://github.com/vitalii87" target="_blank" rel="noreferrer">Профіль GitHub ↗</a><a href="https://github.com/vitalii87/thought-traces/issues" target="_blank" rel="noreferrer">Дискусія про теорії ↗</a></div>
       </section>
     </main>
   );
