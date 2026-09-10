@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const sections = [
@@ -12,11 +13,11 @@ export default function Home() {
       <section className="homeHero shell">
         <p className="kicker"><span className="statusDot" /> Незалежні проєкти · 2026</p>
         <h1>Будую системи.<br /><span>Формулюю гіпотези.</span></h1>
+        <figure className="heroArtwork"><Image src="/home-intelligence.png" alt="Людський і машинний інтелект зустрічаються через технологію" fill sizes="(max-width: 760px) calc(100vw - 30px), 440px" priority unoptimized /></figure>
         <div className="homeIntro">
           <p>Я Віталій Жиляєв. Створюю локальні програмні інструменти, досліджую інтелект і зберігаю відкритий слід того, як розвиваються ідеї.</p>
           <span className="edition">V/01<br />2026</span>
         </div>
-        <div className="heroOrbit" aria-hidden="true"><span /></div>
       </section>
       <section className="sectionIndex shell" aria-labelledby="directions-title">
         <div className="sectionIntro"><p className="kicker">Карта простору</p><h2 id="directions-title">Практика, теорія<br />і контекст.</h2></div>

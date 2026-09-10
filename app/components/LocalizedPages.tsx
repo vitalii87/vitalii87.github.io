@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { localized, projectSlugs, visionSlugs, type Language } from '../content/localized';
 import { ArticleDetail } from './ArticleDetail';
@@ -34,7 +35,8 @@ export function aboutMetadata(lang: Language): Metadata { return { title: lang =
 
 export function LocalizedHomePage({ lang }: { lang: Language }) {
   const page = localized[lang].home;
-  return <main><section className="homeHero shell"><p className="kicker"><span className="statusDot" /> {page.status}</p><h1>{page.line1}<br /><span>{page.line2}</span></h1><div className="homeIntro"><p>{page.intro}</p><span className="edition">V/01<br />2026</span></div><div className="heroOrbit" aria-hidden="true"><span /></div></section><section className="sectionIndex shell"><div className="sectionIntro"><p className="kicker">{page.kicker}</p><h2>{page.sectionTitle.split('\n').map((part, index) => <span key={part}>{part}{index === 0 && <br />}</span>)}</h2></div><div className="indexGrid">{page.cards.map(([number, title, description, href, accent]) => { const destination = lang === 'en' ? (href.replace(/^\/en(?=\/|$)/, '') || '/') : href; return <Link className={`indexCard ${accent}`} href={destination} key={href}><span className="cardNumber">{number}</span><div><h3>{title}</h3><p>{description}</p></div><span className="cardArrow" aria-hidden="true">↗</span></Link>; })}</div></section></main>;
+  const artworkAlt = lang === 'en' ? 'Human and machine intelligence meeting through technology' : 'Menschliche und maschinelle Intelligenz begegnen sich durch Technologie';
+  return <main><section className="homeHero shell"><p className="kicker"><span className="statusDot" /> {page.status}</p><h1>{page.line1}<br /><span>{page.line2}</span></h1><figure className="heroArtwork"><Image src="/home-intelligence.png" alt={artworkAlt} fill sizes="(max-width: 760px) calc(100vw - 30px), 440px" priority unoptimized /></figure><div className="homeIntro"><p>{page.intro}</p><span className="edition">V/01<br />2026</span></div></section><section className="sectionIndex shell"><div className="sectionIntro"><p className="kicker">{page.kicker}</p><h2>{page.sectionTitle.split('\n').map((part, index) => <span key={part}>{part}{index === 0 && <br />}</span>)}</h2></div><div className="indexGrid">{page.cards.map(([number, title, description, href, accent]) => { const destination = lang === 'en' ? (href.replace(/^\/en(?=\/|$)/, '') || '/') : href; return <Link className={`indexCard ${accent}`} href={destination} key={href}><span className="cardNumber">{number}</span><div><h3>{title}</h3><p>{description}</p></div><span className="cardArrow" aria-hidden="true">↗</span></Link>; })}</div></section></main>;
 }
 
 export function LocalizedProjectsPage({ lang }: { lang: Language }) {
