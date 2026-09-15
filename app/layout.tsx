@@ -11,8 +11,12 @@ export const metadata: Metadata = {
   description:
     'Vitalii Zhyliaiev’s projects, research hypotheses and perspectives on intelligence, technology and future systems.',
   icons: {
-    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
-    shortcut: '/favicon.svg',
+    icon: [
+      { url: '/favicon.png', type: 'image/png', sizes: '96x96' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.png',
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
   openGraph: {
     title: 'V/01 — Projects, theories and visions',
