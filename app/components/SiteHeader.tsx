@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
 const copy = {
@@ -12,8 +12,35 @@ const copy = {
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const mobileMenuRef = useRef<HTMLDetailsElement>(null);
   const language = pathname.startsWith('/ua') ? 'uk' : pathname.startsWith('/de') ? 'de' : 'en';
   useEffect(() => { document.documentElement.lang = language; }, [language]);
+  useEffect(() => {
+    const menu = mobileMenuRef.current;
+    if (menu) menu.open = false;
+  }, [pathname]);
+  useEffect(() => {
+    const closeOnOutsideClick = (event: PointerEvent) => {
+      const menu = mobileMenuRef.current;
+      if (menu?.open && !menu.contains(event.target as Node)) menu.open = false;
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      const menu = mobileMenuRef.current;
+      if (event.key === 'Escape' && menu?.open) {
+        menu.open = false;
+        menu.querySelector<HTMLElement>('summary')?.focus();
+      }
+    };
+    document.addEventListener('pointerdown', closeOnOutsideClick);
+    document.addEventListener('keydown', closeOnEscape);
+    return () => {
+      document.removeEventListener('pointerdown', closeOnOutsideClick);
+      document.removeEventListener('keydown', closeOnEscape);
+    };
+  }, []);
+  const closeMobileMenu = () => {
+    if (mobileMenuRef.current) mobileMenuRef.current.open = false;
+  };
   const prefix = language === 'en' ? '' : language === 'uk' ? '/ua' : '/de';
   const pathWithoutLanguage = pathname.replace(/^\/(en|de|ua)(?=\/|$)/, '') || '/';
   const navigation = [
@@ -38,7 +65,7 @@ export function SiteHeader() {
           <nav className="languageNav" aria-label="Language"><Link className={language === 'en' ? 'active' : ''} href={localizedHref('en')}>EN</Link><Link className={language === 'de' ? 'active' : ''} href={localizedHref('de')}>DE</Link></nav>
           <Link className="headerAction" href={`${prefix}/about#contact`}>{copy[language].contact} <span aria-hidden="true">↗</span></Link>
         </div>
-        <details className="mobileMenu"><summary aria-label={copy[language].menu}>{copy[language].menu}</summary><nav aria-label="Mobile navigation">{navigation.map((item) => <Link href={item.href} key={item.href}>{item.label}</Link>)}<div className="mobileLanguages"><Link href={localizedHref('en')}>EN</Link><Link href={localizedHref('de')}>DE</Link></div></nav></details>
+        <details className="mobileMenu" ref={mobileMenuRef}><summary aria-label={copy[language].menu}>{copy[language].menu}</summary><nav aria-label="Mobile navigation">{navigation.map((item) => <Link href={item.href} key={item.href} onClick={closeMobileMenu}>{item.label}</Link>)}<div className="mobileLanguages"><Link href={localizedHref('en')} onClick={closeMobileMenu}>EN</Link><Link href={localizedHref('de')} onClick={closeMobileMenu}>DE</Link></div></nav></details>
       </div>
     </header>
   );
