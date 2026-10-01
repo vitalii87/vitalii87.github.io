@@ -13,7 +13,7 @@ export default function Home() {
       <section className="homeHero shell">
         <p className="kicker"><span className="statusDot" /> Незалежні проєкти · 2026</p>
         <h1>Проєкти в роботі.<br /><span>Робочі гіпотези.</span></h1>
-        <figure className="heroArtwork"><Image src="/home-intelligence.png" alt="Людський і машинний інтелект зустрічаються через технологію" fill sizes="(max-width: 760px) calc(100vw - 30px), 440px" priority unoptimized /></figure>
+        <figure className="heroArtwork"><div className="heroArtworkFrame"><Image src="/home-intelligence.png" alt="Людський і машинний інтелект зустрічаються через технологію" fill sizes="(max-width: 760px) calc(100vw - 30px), 440px" priority unoptimized /></div><figcaption><span>FIG. 01</span><span>HUMAN / MACHINE</span></figcaption></figure>
         <div className="homeIntro">
           <p>Добірка локальних програмних інструментів, експериментів довкола інтелекту та відкритий запис ідей у розвитку.</p>
           <span className="edition">V/01<br />2026</span>
