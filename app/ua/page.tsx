@@ -12,10 +12,10 @@ export default function Home() {
     <main>
       <section className="homeHero shell">
         <p className="kicker"><span className="statusDot" /> Незалежні проєкти · 2026</p>
-        <h1>Будую системи.<br /><span>Формулюю гіпотези.</span></h1>
+        <h1>Проєкти в роботі.<br /><span>Робочі гіпотези.</span></h1>
         <figure className="heroArtwork"><Image src="/home-intelligence.png" alt="Людський і машинний інтелект зустрічаються через технологію" fill sizes="(max-width: 760px) calc(100vw - 30px), 440px" priority unoptimized /></figure>
         <div className="homeIntro">
-          <p>Я Віталій Жиляєв. Створюю локальні програмні інструменти, досліджую інтелект і зберігаю відкритий слід того, як розвиваються ідеї.</p>
+          <p>Добірка локальних програмних інструментів, експериментів довкола інтелекту та відкритий запис ідей у розвитку.</p>
           <span className="edition">V/01<br />2026</span>
         </div>
       </section>
