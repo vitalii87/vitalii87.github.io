@@ -60,22 +60,24 @@ export function LocalizedVisionPage({ lang, slug }: { lang: Language; slug: Visi
   const vision = localized[lang].visions[slug];
   const labels = lang === 'en' ? { back: 'All ideas', structure: 'Structure', source: 'Published preprint', discussion: 'Discussion', discussionTitle: 'A hypothesis gets stronger when someone tries to disprove it.', feedback: 'Leave an argument or question', backHref: '/visions' } : { back: 'Alle Ideen', structure: 'Struktur', source: 'Veröffentlichter Preprint', discussion: 'Diskussion', discussionTitle: 'Eine Hypothese wird stärker, wenn jemand versucht, sie zu widerlegen.', feedback: 'Argument oder Frage hinterlassen', backHref: '/de/visions' };
   const research = slug === 'intelligence-attractor' ? (lang === 'en' ? {
-    kicker: 'Research status', status: 'Experimental evidence in development', title: 'EXP‑001 · Independent Self-Improving Lineages',
-    description: 'The experiment will test whether functional diversity among independent software lineages with different models, languages and architectures decreases as they approach a shared performance frontier under the same binding constraints. This is a research design and infrastructure foundation, not evidence already obtained.',
-    facts: [['Test E1', 'Functional narrowing'], ['Test E2', 'Origin attenuation'], ['Protocol', 'Design draft'], ['IAH Arena', 'Foundation scaffold · 7 tests']] as Array<[string, string]>,
+    kicker: 'Research status', status: 'Experimental infrastructure in development', title: 'IAH Arena · v0.4.1',
+    description: 'Arena now includes an iterative runner with resource budgets, checkpoint recovery and pause/resume, plus an integer-sum integration demo using scripted agents. The README records local and Docker verification of the demo on 19 September 2026. The OpenAI adapter has been tested with simulated responses; a live API pilot remains unverified. The weighted-routing prototype is not yet connected to the runner. EXP‑001 remains a study design for testing functional narrowing and origin attenuation: no autonomous discovery or empirical support for IAH is claimed.',
+    facts: [['Test E1', 'Functional narrowing'], ['Test E2', 'Origin attenuation'], ['EXP‑001', 'Design draft'], ['IAH Arena', 'v0.4.1 · Integration demo'], ['Live API pilot', 'Not yet verified'], ['Status checked', '3 October 2026']] as Array<[string, string]>,
     links: [
-      { label: 'IAH Arena code', href: 'https://github.com/vitalii87/thought-traces/tree/2e04be2/arena' },
-      { label: 'EXP‑001 protocol', href: 'https://github.com/vitalii87/thought-traces/blob/2e04be2/experiments/001-independent-self-improving-lineages/README.md' },
-      { label: 'Experimental programme', href: 'https://github.com/vitalii87/thought-traces/blob/2e04be2/ideas/experimental-program.md' },
+      { label: 'IAH Arena code & status', href: 'https://github.com/vitalii87/intelligence-attractor-hypothesis/tree/e021285/arena' },
+      { label: 'EXP‑001 protocol', href: 'https://github.com/vitalii87/intelligence-attractor-hypothesis/blob/e021285/experiments/001-independent-self-improving-lineages/README.md' },
+      { label: 'Docker demo validation', href: 'https://github.com/vitalii87/intelligence-attractor-hypothesis/blob/e021285/arena/validation/DOCKER_SMOKE.md' },
+      { label: 'Experimental programme', href: 'https://github.com/vitalii87/intelligence-attractor-hypothesis/blob/e021285/ideas/experimental-program.md' },
     ],
   } : {
-    kicker: 'Forschungsstatus', status: 'Experimenteller Nachweis in Entwicklung', title: 'EXP‑001 · Unabhängige selbstverbessernde Entwicklungslinien',
-    description: 'Das Experiment wird prüfen, ob die funktionale Vielfalt unabhängiger Softwarelinien mit unterschiedlichen Modellen, Sprachen und Architekturen abnimmt, wenn sie sich unter denselben bindenden Einschränkungen einer gemeinsamen Leistungsgrenze nähern. Dies ist ein Forschungsdesign und eine infrastrukturelle Grundlage, noch kein erbrachter Nachweis.',
-    facts: [['Test E1', 'Funktionale Verengung'], ['Test E2', 'Abschwächung des Ursprungseinflusses'], ['Protokoll', 'Entwurfsphase'], ['IAH Arena', 'Grundgerüst · 7 Tests']] as Array<[string, string]>,
+    kicker: 'Forschungsstatus', status: 'Experimentelle Infrastruktur in Entwicklung', title: 'IAH Arena · v0.4.1',
+    description: 'Arena umfasst jetzt einen iterativen Runner mit Ressourcenbudgets, Wiederaufnahme ab Checkpoints und Pause/Fortsetzung sowie eine integer-sum-Integrationsdemo mit skriptgesteuerten Agenten. Laut README wurde die Demo am 19. September 2026 lokal und in Docker geprüft. Der OpenAI-Adapter wurde mit simulierten Antworten getestet; ein Live-API-Pilot ist noch ungeprüft. Der Weighted-Routing-Prototyp ist noch nicht an den Runner angebunden. EXP‑001 bleibt ein Studienentwurf zur Prüfung funktionaler Verengung und der Abschwächung des Ursprungseinflusses: Autonome Entdeckungen oder empirische Unterstützung für IAH werden nicht behauptet.',
+    facts: [['Test E1', 'Funktionale Verengung'], ['Test E2', 'Abschwächung des Ursprungseinflusses'], ['EXP‑001', 'Studienentwurf'], ['IAH Arena', 'v0.4.1 · Integrationsdemo'], ['Live-API-Pilot', 'Noch nicht geprüft'], ['Status geprüft', '3. Oktober 2026']] as Array<[string, string]>,
     links: [
-      { label: 'Code der IAH Arena', href: 'https://github.com/vitalii87/thought-traces/tree/2e04be2/arena' },
-      { label: 'Protokoll EXP‑001', href: 'https://github.com/vitalii87/thought-traces/blob/2e04be2/experiments/001-independent-self-improving-lineages/README.md' },
-      { label: 'Experimentelles Programm', href: 'https://github.com/vitalii87/thought-traces/blob/2e04be2/ideas/experimental-program.md' },
+      { label: 'IAH Arena: Code & Status', href: 'https://github.com/vitalii87/intelligence-attractor-hypothesis/tree/e021285/arena' },
+      { label: 'Protokoll EXP‑001', href: 'https://github.com/vitalii87/intelligence-attractor-hypothesis/blob/e021285/experiments/001-independent-self-improving-lineages/README.md' },
+      { label: 'Docker-Demoprüfung', href: 'https://github.com/vitalii87/intelligence-attractor-hypothesis/blob/e021285/arena/validation/DOCKER_SMOKE.md' },
+      { label: 'Experimentelles Programm', href: 'https://github.com/vitalii87/intelligence-attractor-hypothesis/blob/e021285/ideas/experimental-program.md' },
     ],
   }) : undefined;
   const publication = slug === 'intelligence-attractor' ? (lang === 'en' ? {

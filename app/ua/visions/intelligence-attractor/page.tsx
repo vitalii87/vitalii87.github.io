@@ -29,14 +29,15 @@ export default function IntelligenceAttractorPage() {
     }}
     research={{
       kicker: 'Дослідницький статус',
-      status: 'Розробка експериментального доказу',
-      title: 'EXP‑001 · Незалежні самовдосконалювані лінії',
-      description: 'Експеримент перевірятиме, чи зменшується функціональна різноманітність незалежних програмних ліній із різними моделями, мовами та архітектурами, коли вони наближаються до спільного фронтиру продуктивності під однаковими активними обмеженнями. Це дизайн дослідження та інфраструктурна основа, а не вже отриманий доказ.',
-      facts: [['Тест E1', 'Функціональне звуження'], ['Тест E2', 'Послаблення впливу походження'], ['Протокол', 'Чернетка дизайну'], ['IAH Arena', 'Базовий каркас · 7 тестів']],
+      status: 'Експериментальна інфраструктура в розробці',
+      title: 'IAH Arena · v0.4.1',
+      description: 'Arena вже має ітеративний runner із ресурсними бюджетами, відновленням із контрольних точок і паузою/продовженням, а також інтеграційне демо integer-sum зі скриптовими агентами. README фіксує локальну й Docker-перевірку демо 19 вересня 2026 року. Адаптер OpenAI протестовано на змодельованих відповідях; пілот із реальним API ще не перевірений. Прототип задачі зваженої маршрутизації поки не підключений до runner. EXP‑001 залишається дизайном дослідження функціонального звуження та послаблення впливу походження: автономних відкриттів чи емпіричного підтвердження IAH наразі не заявлено.',
+      facts: [['Тест E1', 'Функціональне звуження'], ['Тест E2', 'Послаблення впливу походження'], ['EXP‑001', 'Чернетка дизайну'], ['IAH Arena', 'v0.4.1 · Інтеграційне демо'], ['Пілот із реальним API', 'Ще не перевірений'], ['Статус звірено', '3 жовтня 2026']],
       links: [
-        { label: 'Код IAH Arena', href: 'https://github.com/vitalii87/thought-traces/tree/2e04be2/arena' },
-        { label: 'Протокол EXP‑001', href: 'https://github.com/vitalii87/thought-traces/blob/2e04be2/experiments/001-independent-self-improving-lineages/README.md' },
-        { label: 'Експериментальна програма', href: 'https://github.com/vitalii87/thought-traces/blob/2e04be2/ideas/experimental-program.md' },
+        { label: 'Код і статус IAH Arena', href: 'https://github.com/vitalii87/intelligence-attractor-hypothesis/tree/e021285/arena' },
+        { label: 'Протокол EXP‑001', href: 'https://github.com/vitalii87/intelligence-attractor-hypothesis/blob/e021285/experiments/001-independent-self-improving-lineages/README.md' },
+        { label: 'Docker-перевірка демо', href: 'https://github.com/vitalii87/intelligence-attractor-hypothesis/blob/e021285/arena/validation/DOCKER_SMOKE.md' },
+        { label: 'Експериментальна програма', href: 'https://github.com/vitalii87/intelligence-attractor-hypothesis/blob/e021285/ideas/experimental-program.md' },
       ],
     }}
   />;
