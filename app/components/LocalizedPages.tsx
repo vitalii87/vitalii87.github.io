@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { localized, projectSlugs, visionSlugs, type Language } from '../content/localized';
+import { dualRising, dualRisingSlug } from '../content/dualRising';
 import { ArticleDetail } from './ArticleDetail';
 import { ProjectDetail } from './ProjectDetail';
 import { OriginStory } from './OriginStory';
@@ -53,7 +54,8 @@ export function LocalizedProjectPage({ lang, slug }: { lang: Language; slug: Pro
 
 export function LocalizedVisionsPage({ lang }: { lang: Language }) {
   const heading = localized[lang].visionHeading; const visions = localized[lang].visions;
-  return <main className="pageMain visionsPage"><section className="pageHero shell"><p className="kicker">{heading.kicker}</p><h1>{heading.title1}<br /><span>{heading.title2}</span></h1><p className="pageLead">{heading.lead}</p></section><section className="manifesto shell"><p className="kicker">{heading.position}</p><p className="manifestoPlaceholder">{heading.manifesto}</p></section><section className="themeList shell">{visionSlugs.map((slug, index) => { const vision = visions[slug]; return <Link href={localizedPath(lang, `/visions/${slug}`)} className="themeRow" key={slug}><span>0{index + 1}</span><div><p className="kicker">{vision.category}</p><h2>{vision.title}</h2><p>{vision.description}</p></div><span aria-hidden="true">↗</span></Link>; })}</section></main>;
+  const entries = [...visionSlugs.map((slug) => ({ slug, ...visions[slug] })), { slug: dualRisingSlug, ...dualRising[lang] }];
+  return <main className="pageMain visionsPage"><section className="pageHero shell"><p className="kicker">{heading.kicker}</p><h1>{heading.title1}<br /><span>{heading.title2}</span></h1><p className="pageLead">{heading.lead}</p></section><section className="manifesto shell"><p className="kicker">{heading.position}</p><p className="manifestoPlaceholder">{heading.manifesto}</p></section><section className="themeList shell">{entries.map(({ slug, category, title, description }, index) => <Link href={localizedPath(lang, `/visions/${slug}`)} className="themeRow" key={slug}><span>{String(index + 1).padStart(2, '0')}</span><div><p className="kicker">{category}</p><h2>{title}</h2><p>{description}</p></div><span aria-hidden="true">↗</span></Link>)}</section></main>;
 }
 
 export function LocalizedVisionPage({ lang, slug }: { lang: Language; slug: VisionSlug }) {

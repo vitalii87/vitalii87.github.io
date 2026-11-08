@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { dualRisingPath, dualRisingPublished } from './content/dualRising';
 
 export const dynamic = 'force-static';
 
@@ -14,6 +15,7 @@ const contentPaths = [
   '/visions/intelligence-attractor/paper/',
   '/visions/origin-attenuation/',
   '/visions/relational-narrowing/',
+  dualRisingPath,
   '/about/',
 ];
 
@@ -29,9 +31,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => {
     const isPaper = route === '/visions/intelligence-attractor/paper/';
     const isVision = route.includes('/visions/') || route.endsWith('/visions/');
+    const isNewOrUpdated = route.endsWith(dualRisingPath) || route.endsWith('/visions/');
     return {
       url: `https://zhyliaiev.eu${route}`,
-      lastModified: isVision ? new Date('2026-09-08') : undefined,
+      lastModified: isNewOrUpdated ? new Date(dualRisingPublished) : isVision ? new Date('2026-09-08') : undefined,
       changeFrequency: route === '' || isVision ? 'monthly' : 'yearly',
       priority: route === '' ? 1 : isPaper ? 0.9 : 0.7,
     };
