@@ -175,6 +175,10 @@ a { color: inherit; text-decoration: none; }
 .essayPoster { margin: clamp(28px, 4vw, 52px) 0 0; overflow: hidden; background: var(--paper); }
 .essayPoster img { display: block; width: 100%; height: auto; aspect-ratio: 2.25 / 1; object-fit: cover; object-position: 50% 48%; }
 .essayBody > div { min-width: 0; }
+.essayFigure { max-width: 650px; margin: 30px auto 34px; }
+.essayFigure img { display: block; width: 100%; height: auto; }
+.essayFigure figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.55; }
+.essayFigure figcaption a { white-space: nowrap; }
 .essayBody section + section { margin-top: 62px; }
 .essayBody h2 { font-size: clamp(28px, 4vw, 42px); line-height: 1.12; scroll-margin-top: 110px; }
 .essayBody blockquote { margin-bottom: 28px; }

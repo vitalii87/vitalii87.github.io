@@ -8,6 +8,8 @@ My hypothesis concerns a different possibility: some people continue to develop 
 
 I call this possible scenario **Dual Rising**. One curve traces the development of intellectual capability; the other traces the spread or deepening of deficits in independent thinking. In such a future, features of *Idiocracy* could coexist with scientific discoveries, technical mastery and high intellectual achievement.
 
+<!-- dual-rising-trajectories -->
+
 > Technological development can both expand opportunities for intellectual growth and create conditions in which independent thinking is practised less and less. Depending on how technologies are used and what society rewards, this may help some people develop while leaving the corresponding abilities in others undeveloped or allowing them to diminish.
 
 This prediction needs to be tested. It does not imply that both trends have already been established for humanity as a whole or that technological progress is their only cause.

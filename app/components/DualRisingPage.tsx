@@ -12,6 +12,7 @@ import {
 
 const siteUrl = 'https://zhyliaiev.eu';
 const languages = [['en', 'English'], ['de', 'Deutsch'], ['uk', 'Українська']] as const;
+const trajectoriesSrc = '/dual-rising-trajectories.webp';
 
 export function dualRisingMetadata(lang: DualRisingLanguage): Metadata {
   const copy = dualRising[lang];
@@ -82,7 +83,19 @@ function loadEssay(lang: DualRisingLanguage) {
   return { subtitle: subtitle.slice(1, -1), sections };
 }
 
-function EssayBlock({ text }: { text: string }) {
+function EssayBlock({ text, lang }: { text: string; lang: DualRisingLanguage }) {
+  if (text === '<!-- dual-rising-trajectories -->') {
+    const copy = dualRising[lang];
+    return (
+      <figure className="essayFigure">
+        <Image src={trajectoriesSrc} width={1774} height={887} alt={copy.trajectoriesAlt} unoptimized />
+        <figcaption>
+          {copy.trajectoriesCaption}{' '}
+          <a href={trajectoriesSrc} target="_blank" rel="noreferrer">{copy.trajectoriesZoom} <span aria-hidden="true">↗</span></a>
+        </figcaption>
+      </figure>
+    );
+  }
   if (text.startsWith('> ')) return <blockquote>{inline(text.slice(2))}</blockquote>;
   const lines = text.split('\n');
   if (lines.every((line) => /^\d+\. /.test(line))) {
@@ -122,7 +135,7 @@ export function DualRisingPage({ lang }: { lang: DualRisingLanguage }) {
           {essay.sections.map((section) => (
             <section key={section.id ?? 'intro'} aria-labelledby={section.id}>
               {section.title && <h2 id={section.id}>{section.title}</h2>}
-              {section.blocks.map((block) => <EssayBlock key={block} text={block} />)}
+              {section.blocks.map((block) => <EssayBlock key={block} text={block} lang={lang} />)}
             </section>
           ))}
         </div>

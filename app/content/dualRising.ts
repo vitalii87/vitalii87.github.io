@@ -13,6 +13,9 @@ export const dualRising = {
     contents: 'Contents',
     translations: 'Read in another language',
     posterAlt: 'A ruined city under dark smoke beside researchers in a blue-lit, high-tech laboratory.',
+    trajectoriesAlt: 'A blue curve for intellectual capability and an orange curve for deficits in independent thinking both rise over time.',
+    trajectoriesCaption: 'The curves and dates are illustrative, not measured data or a forecast.',
+    trajectoriesZoom: 'Enlarge chart',
     prefix: '',
   },
   de: {
@@ -25,6 +28,9 @@ export const dualRising = {
     contents: 'Inhalt',
     translations: 'In einer anderen Sprache lesen',
     posterAlt: 'Eine zerstörte Stadt unter dunklem Rauch neben Forschenden in einem blau beleuchteten Hightech-Labor.',
+    trajectoriesAlt: 'Eine blaue Kurve für intellektuelle Leistungsfähigkeit und eine orange Kurve für Defizite im eigenständigen Denken steigen beide im Zeitverlauf.',
+    trajectoriesCaption: 'Kurven und Jahreszahlen dienen der Veranschaulichung; sie zeigen weder Messdaten noch eine Prognose.',
+    trajectoriesZoom: 'Grafik vergrößern',
     prefix: '/de',
   },
   uk: {
@@ -37,6 +43,9 @@ export const dualRising = {
     contents: 'Зміст',
     translations: 'Читати іншою мовою',
     posterAlt: 'Зруйноване місто під темним димом поруч із дослідниками в освітленій синім високотехнологічній лабораторії.',
+    trajectoriesAlt: 'Синя крива інтелектуальної спроможності та помаранчева крива дефіцитів самостійного мислення одночасно зростають.',
+    trajectoriesCaption: 'Криві й дати умовні: це ілюстрація гіпотези, а не виміряні дані чи прогноз.',
+    trajectoriesZoom: 'Збільшити схему',
     prefix: '/ua',
   },
 } as const;

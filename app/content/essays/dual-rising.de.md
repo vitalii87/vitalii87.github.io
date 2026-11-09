@@ -8,6 +8,8 @@ Meine Hypothese betrifft eine andere Möglichkeit: Ein Teil der Menschen entwick
 
 Ich nenne dieses mögliche Szenario **Dual Rising – doppelter Anstieg**. Die eine Kurve zeigt die Entwicklung intellektueller Leistungsfähigkeit, die andere die Ausbreitung oder Vertiefung von Defiziten im eigenständigen Denken. In einer solchen Zukunft könnten Züge von *Idiocracy* neben wissenschaftlichen Entdeckungen, technischem Können und hohen intellektuellen Leistungen bestehen.
 
+<!-- dual-rising-trajectories -->
+
 > Technologische Entwicklung kann die Möglichkeiten intellektueller Entfaltung erweitern und zugleich Bedingungen schaffen, unter denen eigenständiges Denken immer seltener geübt wird. Je nachdem, wie Technologien eingesetzt werden und welche Anreize die Gesellschaft setzt, kann das die Entwicklung mancher Menschen fördern, während entsprechende Fähigkeiten bei anderen unausgebildet bleiben oder nachlassen.
 
 Diese Vorhersage muss überprüft werden. Sie bedeutet weder, dass beide Trends für die Menschheit insgesamt bereits nachgewiesen sind, noch, dass technologischer Fortschritt ihre einzige Ursache ist.
