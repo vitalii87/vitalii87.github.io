@@ -16,6 +16,8 @@ Ich nenne dieses mögliche Szenario **Dual Rising – doppelter Anstieg**. Die e
 
 Nach dieser Hypothese kann Fortschritt das menschliche Verständnis vertiefen und zugleich die praktische Notwendigkeit verringern, Dinge selbst zu verstehen. Die Gefahr wächst, wenn Menschen Ergebnisse ohne Verständnis erzielen und andere beeinflussen können, ohne für die Verlässlichkeit ihrer Aussagen einstehen zu müssen. Das sind zwei verwandte, aber unterschiedliche Probleme: der Wandel menschlicher Fähigkeiten und der Wandel des gesellschaftlichen Einflusses schlechter Urteile.
 
+**Intellektuelle Leistungsfähigkeit und Urteilsqualität**
+
 Unter **intellektueller Leistungsfähigkeit** verstehe ich die Fähigkeiten, die Menschen tatsächlich einsetzen, um Informationen zu verstehen, kausale Erklärungen zu entwickeln, Belege zu bewerten, Widersprüche zu erkennen, Schlussfolgerungen zu revidieren und neuartige Aufgaben zu lösen. Das ist ein Arbeitsbegriff für mehrere Merkmale, kein Synonym für IQ und keine etablierte psychologische Messgröße.
 
 Den Gegenpol bilden **Defizite im eigenständigen Denken**. Gemeint sind anhaltende Schwierigkeiten bei diesen Tätigkeiten, die sich bei unterschiedlichen Aufgaben zeigen. Nehmen solche Schwierigkeiten im Lauf der Zeit zu, lässt sich in bestimmten Hinsichten von intellektuellem Abbau sprechen. Wurden die nötigen Fähigkeiten nie entwickelt, ist es genauer, sie als unausgebildet zu bezeichnen.
@@ -30,11 +32,15 @@ Daraus ergibt sich ein eigenes Risiko, das ich mit Dual Rising verbinde: Eine Ge
 
 Leistungsfähigkeit kann je nach Bereich unterschiedlich ausgeprägt sein. Ein Mensch kann anspruchsvolles berufliches Denken entwickeln und zugleich Mühe haben, Informationen außerhalb seines Fachgebiets einzuordnen. Umgekehrt garantiert eine Schwäche in einem Bereich keine verborgene Stärke in einem anderen: Die Hypothese lässt sowohl unausgebildete Fähigkeiten in mehreren Bereichen als auch einen tatsächlichen Rückgang der Fähigkeit zu, Probleme eigenständig zu durchdringen.
 
+**Wie können beide Kurven steigen?**
+
 Misst man dieselbe Eigenschaft derselben Person unter gleichen Bedingungen, können Verbesserung und Verschlechterung nicht dasselbe bedeuten. Dual Rising betrifft unterschiedliche Entwicklungen innerhalb der Gesellschaft sowie unterschiedliche Aspekte der Entwicklung einer einzelnen Person.
 
 In einem bestimmten Bereich könnte beispielsweise der Anteil der Menschen steigen, die schwierige Aufgaben selbstständig lösen, und zugleich der Anteil derer, die an grundlegenden Aufgaben scheitern. Das ist möglich, wenn der Anteil zwischen diesen Niveaus sinkt. Eine andere Möglichkeit wäre, dass die Leistungen am oberen Ende der Verteilung weiter steigen, während sie am unteren Ende abnehmen. Das sind unterschiedliche Möglichkeiten, den Grundgedanken zu prüfen; sie sollten nicht in einer einzigen Grafik vermischt werden.
 
 Die zweite Kurve steht somit für eine Zunahme von Defiziten: Ein Anstieg bedeutet hier eine Verschlechterung. Die Kurve sagt nicht voraus, dass sich die gesamte Bevölkerung zwangsläufig in dieselbe Richtung entwickelt. Beide Kurven bleiben konzeptionell, solange Messgrößen, Gruppen und Zeitraum nicht definiert sind.
+
+**Warum könnten Technologien beide Prozesse fördern?**
 
 Beim Lernen und bei der Arbeit lassen sich zwei Arten vorstellen, dieselbe Unterstützung zu nutzen. Man kann Erklärungen nachvollziehen, eigene Annahmen prüfen und zu schwierigeren Aufgaben übergehen. Man kann sich auch fertige Antworten geben lassen und dabei kaum die Denkarbeit leisten, durch die man lernen würde. Nach außen kann das Ergebnis in beiden Fällen erfolgreich aussehen.
 
@@ -52,6 +58,8 @@ Diese Mechanismen verbinden individuelle Gewohnheiten mit gesellschaftlichen Anr
 
 Suchterkrankungen, Arbeitslosigkeit oder ein niedriger sozialer Status sind keine direkten Indikatoren für Defizite im Denken. Sie können Teil einzelner Kausalzusammenhänge sein, aber ihr Bezug zu den untersuchten Fähigkeiten muss erst belegt werden.
 
+**Was ist bereits bekannt, und was belegen diese Daten nicht?**
+
 Forschungsergebnisse geben Anlass, einzelne Mechanismen ernst zu nehmen. In einem Feldexperiment von Bastani und Kollegen lernten fast tausend Schülerinnen und Schüler der Oberstufe Mathematik mit unterschiedlichen Formen der Unterstützung. Mit einem herkömmlichen KI-Assistenten fielen die Übungsergebnisse besser aus. Nach Wegfall der Unterstützung lagen die Ergebnisse dieser Gruppe jedoch rund 17 % unter denen der Kontrollgruppe. Ein KI-Tutor mit didaktischen Leitplanken beseitigte den negativen Effekt weitgehend, ohne dass sich in der Prüfung ohne Hilfsmittel ein überzeugender Vorteil gegenüber der Kontrollgruppe zeigte. Das ist ein Befund zum Erlernen des Stoffes, kein Beleg für einen allgemeinen Intelligenzverlust. [3](https://pmc.ncbi.nlm.nih.gov/articles/PMC12232635/)
 
 Shen und Tamkin kamen in einem kleinen Experiment mit Programmierern, die sich in eine neue Bibliothek einarbeiteten, zu verwandten Ergebnissen. Die KI-Nutzung ging mit einem niedrigeren Durchschnittsergebnis im anschließenden Test einher. Unter den Nutzern des Assistenten war eine auf Verständnis ausgerichtete Interaktion mit besseren Lernergebnissen verbunden als weitreichendes Delegieren. Der Vergleich selbst gewählter Nutzungsweisen lässt keine kausalen Schlüsse zu, und ein kurzes Experiment zeigt keinen mehrjährigen Entwicklungsverlauf. Die hier zitierte Arbeit erschien als Preprint. [4](https://www.anthropic.com/research/AI-assistance-coding-skills)
@@ -64,11 +72,15 @@ Ein Szenario, das Dual Rising ähnelt, wurde auch theoretisch untersucht. Im Pre
 
 Dual Rising knüpft somit an bereits formulierte Fragen und Mechanismen an. Der Essay führt sie unter der Frage nach einer partiellen *Idiocracy* zusammen, ohne Beobachtungen, Modelle und Vorhersagen gleichzusetzen.
 
+**Was würde eine partielle „Idiocracy“ bedeuten?**
+
 Unter einer partiellen *Idiocracy* verstehe ich ein Szenario, in dem hohe intellektuelle Leistungen mit weitverbreiteten Defiziten im eigenständigen Denken einhergehen. Die politischen Risiken hängen auch davon ab, wer Einfluss hat und wie Entscheidungen überprüft werden. Wenige Menschen mit großer Macht können die Folgen für Millionen bestimmen; wachsende Fähigkeiten der übrigen Bevölkerung gleichen die Fehler solcher Entscheidungen nicht unbedingt aus.
 
 Die beiden steigenden Kurven bedeuten daher nicht, dass sich Entwicklung und Niedergang gegenseitig ausgleichen. Sie sagen nichts darüber aus, ob beide Prozesse gleich schwerwiegende Folgen haben. Wissenschaftliche Offenheit und politische Missachtung von Belegen können nebeneinander bestehen, doch ihr Konflikt hat einen praktischen Preis. Eine Gesellschaft muss Wissen nicht nur hervorbringen, sondern auch dort anwenden können, wo Entscheidungen getroffen werden.
 
 Zugleich bestätigt der wachsende Einfluss unbegründeter Urteile für sich genommen noch keinen Anstieg der zweiten Kurve. Selbst bei unveränderten individuellen Fähigkeiten können Institutionen und Kommunikationsmittel solchen Urteilen mehr Macht verleihen. Das ist ein eigener Weg zu Folgen, die an *Idiocracy* erinnern, und er muss gesondert untersucht werden.
+
+**Wie lässt sich die Hypothese prüfen?**
 
 Nötig sind langfristige Beobachtungen und Experimente mit klar definierten Messgrößen: Textverständnis, kausales Denken, Bewertung von Belegen, Korrektur eigener Fehler und Übertragung von Wissen auf unbekannte Aufgaben. Diese Merkmale sollten zunächst getrennt gemessen werden. Fasst man sie zu einem Gesamtindex zusammen, muss begründet werden, was dieser erfasst.
 

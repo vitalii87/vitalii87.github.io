@@ -16,6 +16,8 @@ I call this possible scenario **Dual Rising**. One curve traces the development 
 
 In this hypothesis, progress can deepen human understanding while making it less necessary in practice. The danger increases when people can both get results without understanding them and influence others without being held accountable for the accuracy of their claims. These are related but distinct problems: changes in people’s abilities and changes in the social influence of poor judgements.
 
+**Intellectual capability and quality of judgement**
+
 By **intellectual capability**, I mean the abilities people actually use to understand information, construct causal explanations, evaluate evidence, notice contradictions, revise conclusions, and solve unfamiliar problems. This is a working term for several characteristics, not a synonym for IQ or an established psychological measure.
 
 The opposite pole consists of **deficits in independent thinking**: persistent difficulties with these activities that show up across different tasks. If those difficulties increase over time, it makes sense to speak of intellectual decline in specific respects. If the relevant abilities were never developed, it is more precise to say that they remain undeveloped.
@@ -30,11 +32,15 @@ This points to a separate risk that I associate with Dual Rising: a society can 
 
 Capability can vary across domains. The same person can develop sophisticated professional reasoning while struggling to evaluate information outside their specialism. At the same time, weakness in one domain does not guarantee a hidden strength elsewhere: the hypothesis allows both for skills that remain undeveloped across domains and for a genuine narrowing of the ability to work through problems independently.
 
+**How can both curves rise?**
+
 If we measure the same trait in the same person under the same conditions, improvement and deterioration cannot mean the same thing. Dual Rising concerns different trajectories within society, as well as different aspects of one person’s development.
 
 For example, in a defined domain the share of people who can solve complex tasks on their own may rise alongside the share of people who struggle with basic tasks. That is possible if the share between those levels shrinks. Another possibility is that achievement at the top of the distribution continues to rise while performance at the bottom worsens. These are different ways to test the general intuition; they should not be conflated in a single graph.
 
 The second curve thus represents accumulating deficits, so its upward movement signifies deterioration. It is not a prediction that the entire population will necessarily move in one direction. The curves remain conceptual until the measures, groups and time period have been defined.
+
+**Why might technology support both processes?**
 
 In education and at work, it is easy to imagine two ways of using the same assistance. A person can work through explanations, check their assumptions and move on to harder tasks. Or they can obtain ready-made answers while doing almost none of the mental work through which they would learn. The outward result can look successful in both cases.
 
@@ -52,6 +58,8 @@ These mechanisms link individual habits to social rewards. It remains possible t
 
 Addiction, unemployment, and low social status are not direct indicators of deficits in thinking. They may be part of particular causal explanations, but any link to the abilities being studied needs to be established.
 
+**What do we know, and what do the data not show?**
+
 Research gives us reason to take some of these mechanisms seriously. In a field experiment by Bastani and colleagues, nearly a thousand high school students studied mathematics with different kinds of support. Students with a standard AI assistant did better on practice exercises, but when assistance was removed, that group scored about 17% below the control group. An AI tutor with instructional guardrails largely eliminated the negative effect, although there was no clear advantage over the control group on the unassisted exam. This is a result about learning the material, not evidence of a general decline in intelligence. [3](https://pmc.ncbi.nlm.nih.gov/articles/PMC12232635/)
 
 Shen and Tamkin obtained related results in a small experiment with programmers learning a new library. AI use was accompanied by a lower average score on a subsequent test. Among participants who used the assistant, interactions aimed at understanding were associated with better learning than extensive delegation. Comparing self-selected patterns of use does not establish causality, and a short experiment cannot reveal a trajectory spanning years. The work cited here was released as a preprint. [4](https://www.anthropic.com/research/AI-assistance-coding-skills)
@@ -64,11 +72,15 @@ A scenario close to Dual Rising has also been explored theoretically. In Caosun 
 
 Dual Rising thus draws on questions and mechanisms that have already been articulated. Its purpose in this essay is to bring them together around the question of a partial *Idiocracy*, while keeping observations, models and predictions distinct.
 
+**What would a partial “Idiocracy” mean?**
+
 By a partial *Idiocracy*, I mean a scenario in which high intellectual achievement coexists with widespread deficits in independent thinking. Its political risks also depend on who holds influence and how decisions are scrutinised. A small number of people with considerable power can shape outcomes for millions; improvements in everyone else’s abilities do not necessarily offset the mistakes made in those decisions.
 
 The two rising curves should therefore not be read as development and decline balancing each other out. They tell us nothing about whether the consequences of both processes will be equal. Scientific openness and political disregard for evidence can coexist, but the conflict between them has a practical cost. A society needs to be able to apply knowledge where decisions are made, as well as to produce it.
 
 At the same time, the growing influence of unsupported judgements does not, on its own, confirm that the second curve is rising. Even if individual abilities remain unchanged, institutions and means of communication can give such judgements more power. This is a separate route to outcomes resembling *Idiocracy*, and it needs to be tested separately.
+
+**How could the hypothesis be tested?**
 
 We need long-term observations and experiments with clearly specified measures: reading comprehension, causal reasoning, assessment of evidence, correction of one’s own errors and transfer of knowledge to unfamiliar tasks. These should first be measured separately. Combining them into a single index would require a justification of what it measures.
 

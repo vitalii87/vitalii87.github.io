@@ -171,7 +171,11 @@ a { color: inherit; text-decoration: none; }
 .essayByline { margin: 0 0 24px; color: var(--muted); font-size: 14px; }
 .essayPoster { margin: clamp(28px, 4vw, 52px) 0 0; overflow: hidden; background: var(--paper); }
 .essayPoster img { display: block; width: 100%; height: auto; aspect-ratio: 2.25 / 1; object-fit: cover; object-position: 50% 48%; }
-.essayBody > div { min-width: 0; }
+.essayBody { grid-template-columns: minmax(180px, 230px) minmax(0, 1fr); gap: clamp(30px, 5vw, 64px); padding-top: clamp(40px, 6vw, 76px); }
+.essayBody > div { min-width: 0; max-width: 880px; }
+.essayContents { position: sticky; top: 32px; max-height: calc(100vh - 64px); overflow: auto; padding: 2px 12px 6px 0; }
+.essayBody .essayContents ol { margin: 16px 0 0; font-size: 14px; line-height: 1.5; }
+.essayContents li + li { margin-top: 10px; }
 .essayFigure { max-width: 650px; margin: 30px auto 34px; }
 .essayFigure img { display: block; width: 100%; height: auto; }
 .essayFigure figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.55; }
@@ -346,6 +350,8 @@ a { color: inherit; text-decoration: none; }
   .publicationStripBody { grid-template-columns: 1fr; gap: 32px; }
   .articleBody { gap: 50px; padding-top: 70px; }
   .articleBody aside { border-bottom: 1px solid var(--line); }
+  .essayBody { grid-template-columns: minmax(0, 1fr); gap: 34px; padding-top: 36px; }
+  .essayContents { position: static; max-height: none; overflow: visible; padding-bottom: 24px; }
   .quotePlaceholder { padding: 32px; font-size: 24px; }
   .articleBody blockquote { padding: 30px; font-size: 23px; }
   .researchPanel { margin-top: 80px; padding: 30px 24px; }
