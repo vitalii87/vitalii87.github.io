@@ -11,7 +11,6 @@ import {
 } from '../content/dualRising';
 
 const siteUrl = 'https://zhyliaiev.eu';
-const languages = [['en', 'English'], ['de', 'Deutsch'], ['uk', 'Українська']] as const;
 const trajectoriesSrc = '/dual-rising-trajectories.webp';
 
 export function dualRisingMetadata(lang: DualRisingLanguage): Metadata {
@@ -115,11 +114,6 @@ export function DualRisingPage({ lang }: { lang: DualRisingLanguage }) {
         <h1 id="essay-title">{copy.title}</h1>
         <p className="essaySubtitle">{essay.subtitle}</p>
         <p className="essayByline">{copy.author} <span aria-hidden="true">·</span> <time dateTime={dualRisingPublished}>{copy.date}</time></p>
-        <nav className="essayLanguages" aria-label={copy.translations}>
-          {languages.map(([language, label]) => (
-            <Link key={language} href={`${dualRising[language].prefix}${dualRisingPath}`} lang={language} hrefLang={language} aria-current={language === lang ? 'page' : undefined}>{label}</Link>
-          ))}
-        </nav>
         <figure className="essayPoster">
           <Image src="/dual-rising-poster.webp" width={1774} height={887} alt={copy.posterAlt} unoptimized />
         </figure>
