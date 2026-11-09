@@ -4,7 +4,7 @@ export const dualRisingPublished = '2026-11-08';
 
 export const dualRising = {
   en: {
-    title: 'Dual Rising: Is a Partial “Idiocracy” Possible?',
+    title: 'Dual Rising: Two Sides of Progress',
     category: 'Conceptual essay · 2026',
     description: 'Could technology deepen understanding for some people while reducing opportunities to practise independent thinking for others?',
     author: 'Vitalii Zhyliaiev',
@@ -15,7 +15,7 @@ export const dualRising = {
     prefix: '',
   },
   de: {
-    title: 'Dual Rising: Ist eine partielle „Idiocracy“ möglich?',
+    title: 'Dual Rising: Zwei Seiten des Fortschritts',
     category: 'Konzeptioneller Essay · 2026',
     description: 'Kann Technologie das Verständnis mancher Menschen vertiefen und zugleich anderen weniger Gelegenheit geben, eigenständiges Denken zu üben?',
     author: 'Vitalii Zhyliaiev',
@@ -26,7 +26,7 @@ export const dualRising = {
     prefix: '/de',
   },
   uk: {
-    title: 'Dual Rising: чи можлива часткова «Ідіократія»?',
+    title: 'Dual Rising: дві сторони прогресу',
     category: 'Концептуальне есе · 2026',
     description: 'Чи можуть технології поглиблювати розуміння в одних людей і водночас залишати іншим менше нагод практикувати самостійне мислення?',
     author: 'Віталій Жиляєв',

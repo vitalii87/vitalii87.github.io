@@ -1,4 +1,4 @@
-# Dual Rising: Is a Partial “Idiocracy” Possible?
+# Dual Rising: Two Sides of Progress
 
 *A conceptual essay on simultaneous intellectual development and decline in a technological society*
 
