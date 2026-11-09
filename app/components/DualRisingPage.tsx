@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   dualRising,
@@ -106,6 +107,9 @@ export function DualRisingPage({ lang }: { lang: DualRisingLanguage }) {
             <Link key={language} href={`${dualRising[language].prefix}${dualRisingPath}`} lang={language} hrefLang={language} aria-current={language === lang ? 'page' : undefined}>{label}</Link>
           ))}
         </nav>
+        <figure className="essayPoster">
+          <Image src="/dual-rising-poster.webp" width={1774} height={887} alt={copy.posterAlt} unoptimized />
+        </figure>
       </header>
       <article className="articleBody essayBody shell" aria-labelledby="essay-title">
         <aside>

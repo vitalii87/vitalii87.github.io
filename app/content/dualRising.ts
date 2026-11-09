@@ -12,6 +12,7 @@ export const dualRising = {
     back: 'All ideas',
     contents: 'Contents',
     translations: 'Read in another language',
+    posterAlt: 'A ruined city under dark smoke beside researchers in a blue-lit, high-tech laboratory.',
     prefix: '',
   },
   de: {
@@ -23,6 +24,7 @@ export const dualRising = {
     back: 'Alle Ideen',
     contents: 'Inhalt',
     translations: 'In einer anderen Sprache lesen',
+    posterAlt: 'Eine zerstörte Stadt unter dunklem Rauch neben Forschenden in einem blau beleuchteten Hightech-Labor.',
     prefix: '/de',
   },
   uk: {
@@ -34,6 +36,7 @@ export const dualRising = {
     back: 'Усі погляди',
     contents: 'Зміст',
     translations: 'Читати іншою мовою',
+    posterAlt: 'Зруйноване місто під темним димом поруч із дослідниками в освітленій синім високотехнологічній лабораторії.',
     prefix: '/ua',
   },
 } as const;
