@@ -7,6 +7,7 @@ import {
   dualRising,
   dualRisingPath,
   dualRisingPublished,
+  dualRisingUpdated,
   type DualRisingLanguage,
 } from '../content/dualRising';
 
@@ -35,6 +36,7 @@ export function dualRisingMetadata(lang: DualRisingLanguage): Metadata {
       title: copy.title,
       description: copy.description,
       publishedTime: dualRisingPublished,
+      modifiedTime: dualRisingUpdated,
       authors: [copy.author],
     },
     twitter: { card: 'summary', title: copy.title, description: copy.description },

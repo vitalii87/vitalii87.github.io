@@ -1,6 +1,7 @@
 export const dualRisingSlug = 'dual-rising';
 export const dualRisingPath = `/visions/${dualRisingSlug}/`;
 export const dualRisingPublished = '2026-11-08';
+export const dualRisingUpdated = '2026-11-09';
 
 export const dualRising = {
   en: {
