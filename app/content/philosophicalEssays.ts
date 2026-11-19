@@ -12,9 +12,9 @@ export const essayLabels = {
 
 export const essayCopy = {
   'before-the-mirror-of-superintelligence': {
-    uk: { title: 'Перед дзеркалом надінтелекту', description: 'Як перспектива втрати влади може змінити ставлення людей до слабших і до створеного ними розуму?' },
-    en: { title: 'Before the Mirror of Superintelligence', description: 'How might the prospect of losing power change how we treat those with less power and the minds we create?' },
-    de: { title: 'Vor dem Spiegel der Superintelligenz', description: 'Wie könnte die Aussicht auf Machtverlust unseren Umgang mit Schwächeren und mit der von uns geschaffenen Intelligenz verändern?' },
+    uk: { title: 'Перед дзеркалом надінтелекту', subtitle: 'Чи здатна поява іншого розуму змінити мораль людства?', description: 'Як перспектива втрати влади може змінити ставлення людей до слабших і до створеного ними розуму?' },
+    en: { title: 'Before the Mirror of Superintelligence', subtitle: 'Could the emergence of another kind of mind change human morality?', description: 'How might the prospect of losing power change how we treat those with less power and the minds we create?' },
+    de: { title: 'Vor dem Spiegel der Superintelligenz', subtitle: 'Könnte die Entstehung einer anderen Form von Intelligenz unsere Moral verändern?', description: 'Wie könnte die Aussicht auf Machtverlust unseren Umgang mit Schwächeren und mit der von uns geschaffenen Intelligenz verändern?' },
   },
   trish: {
     uk: { title: 'TRISH', subtitle: 'Гіпотеза трансреального інформаційного субстрату', description: 'Чи може інтелект усередині створеного світу зрозуміти його основу глибше за своїх творців?' },
