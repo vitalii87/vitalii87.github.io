@@ -14,7 +14,9 @@ Much of the public debate focuses on how humanity will control a future intellig
 
 What will happen to humanity itself if it one day encounters a mind that surpasses its own and can decide for itself whether to serve as its tool?
 
-<!-- essay-intro -->
+## Who decides where the road goes?
+
+Start with a decision we already make on behalf of others.
 
 There are two possible routes for the road. The shorter one will pass through the floodplain, where birds nest every spring. The longer route would go around it, but the community will have to pay more. Those at the table understand both considerations. Whatever decision they make, the birds will live with its consequences.
 

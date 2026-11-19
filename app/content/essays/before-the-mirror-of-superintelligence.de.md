@@ -14,7 +14,9 @@ In der öffentlichen Debatte geht es vor allem darum, wie die Menschheit eine k�
 
 Was geschieht mit der Menschheit selbst, wenn sie eines Tages einem Verstand begegnet, der ihren eigenen übertrifft und selbst entscheiden kann, ob er ihr als Werkzeug dienen will?
 
-<!-- essay-intro -->
+## Wer entscheidet, wo die Straße verläuft?
+
+Beginnen wir mit einer Entscheidung, die wir schon heute für andere treffen.
 
 Für die Straße kommen zwei Trassen infrage. Der kürzere Weg führt durch die Aue, wo jedes Frühjahr Vögel nisten. Die längere führt um die Aue herum, kostet die Gemeinde aber mehr. Am Tisch sitzen Menschen, die beides verstehen. Welche Entscheidung sie auch treffen, die Vögel werden mit den Konsequenzen leben.
 

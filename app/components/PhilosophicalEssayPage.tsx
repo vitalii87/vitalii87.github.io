@@ -53,11 +53,8 @@ export function PhilosophicalEssayPage({ lang, slug }: { lang: EssayLocale; slug
 
   for (const block of blocks) {
     if (slug === 'before-the-mirror-of-superintelligence' && block.startsWith('## ')) {
-      sections.push({ title: block.slice(3), id: 'authors-note', blocks: [] });
-      continue;
-    }
-    if (block === '<!-- essay-intro -->') {
-      sections.push({ blocks: [] });
+      const id = sections[sections.length - 1].id === 'authors-note' ? 'essay-intro' : 'authors-note';
+      sections.push({ title: block.slice(3), id, blocks: [] });
       continue;
     }
     const heading = block.match(slug === 'trish' ? /^## (.+)$/ : /^### (.+)$/);
