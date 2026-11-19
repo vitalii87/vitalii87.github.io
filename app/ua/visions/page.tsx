@@ -11,19 +11,34 @@ const ideas = [
   { number: '04', meta: dualRising.uk.category, title: dualRising.uk.title, description: dualRising.uk.description, href: `/ua${dualRisingPath}` },
 ];
 
+const essays = [
+  { number: '05', meta: 'Філософське есе', title: 'Перед дзеркалом надінтелекту', description: 'Як перспектива втрати влади може змінити ставлення людей до слабших і до створеного ними розуму?', href: '/ua/visions/before-the-mirror-of-superintelligence/' },
+  { number: '06', meta: 'Філософське есе · англійською', title: 'TRISH', description: 'Чи може інтелект усередині створеного світу зрозуміти його основу глибше за своїх творців?', href: '/ua/visions/trish/' },
+];
+
+function VisionRow({ idea }: { idea: (typeof ideas)[number] }) {
+  return (
+    <Link href={idea.href} className="themeRow">
+      <span>{idea.number}</span>
+      <div><p className="kicker">{idea.meta}</p><h2>{idea.title}</h2><p>{idea.description}</p></div>
+      <span aria-hidden="true">↗</span>
+    </Link>
+  );
+}
+
 export default function VisionsPage() {
   return (
     <main className="pageMain visionsPage">
       <section className="pageHero shell"><p className="kicker">02 / Погляди</p><h1>Думки —<br /><span>це теж прототипи.</span></h1><p className="pageLead">Гіпотеза атрактора інтелекту, пов’язані дослідницькі нотатки й есе про те, як технології впливають на мислення.</p></section>
       <section className="manifesto shell"><p className="kicker">Позиція</p><p className="manifestoPlaceholder">Це не збірка остаточних відповідей. Це відкритий інтелектуальний слід: гіпотези мають статус, межі й запрошення до перевірки.</p></section>
       <section className="themeList shell" aria-label="Опубліковані тексти">
-        {ideas.map((idea) => (
-          <Link href={idea.href} className="themeRow" key={idea.href}><span>{idea.number}</span><div><p className="kicker">{idea.meta}</p><h2>{idea.title}</h2><p>{idea.description}</p></div><span aria-hidden="true">↗</span></Link>
-        ))}
+        {ideas.map((idea) => <VisionRow key={idea.href} idea={idea} />)}
       </section>
-      <section className="themeList shell" aria-labelledby="philosophical-essays">
-        <h2 id="philosophical-essays">Філософські есеї</h2>
-        <Link href="/ua/visions/before-the-mirror-of-superintelligence/" className="themeRow"><span>05</span><div><h3>Перед дзеркалом надінтелекту</h3><p>Як перспектива втрати влади може змінити ставлення людей до слабших і до створеного ними розуму?</p></div><span aria-hidden="true">↗</span></Link>
+      <section className="shell" aria-labelledby="philosophical-essays">
+        <h2 id="philosophical-essays" className="kicker themeGroupTitle">Філософські есеї</h2>
+        <div className="themeList">
+          {essays.map((idea) => <VisionRow key={idea.href} idea={idea} />)}
+        </div>
       </section>
     </main>
   );

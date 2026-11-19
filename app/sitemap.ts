@@ -26,6 +26,7 @@ const routes = [
   '/ua/projects/qa-automation/',
   '/ua/projects/thought-traces/',
   '/ua/visions/before-the-mirror-of-superintelligence/',
+  '/ua/visions/trish/',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -36,7 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const isVisionsIndex = route.endsWith('/visions/');
     return {
       url: `https://zhyliaiev.eu${route}`,
-      lastModified: route === '/ua/visions/before-the-mirror-of-superintelligence/' || route === '/ua/visions/' ? new Date('2026-11-19') : isDualRising ? new Date(dualRisingUpdated) : isVisionsIndex ? new Date(dualRisingPublished) : isVision ? new Date('2026-09-08') : undefined,
+      lastModified: ['/ua/visions/before-the-mirror-of-superintelligence/', '/ua/visions/trish/', '/ua/visions/'].includes(route) ? new Date('2026-11-19') : isDualRising ? new Date(dualRisingUpdated) : isVisionsIndex ? new Date(dualRisingPublished) : isVision ? new Date('2026-09-08') : undefined,
       changeFrequency: route === '' || isVision ? 'monthly' : 'yearly',
       priority: route === '' ? 1 : isPaper ? 0.9 : 0.7,
     };
