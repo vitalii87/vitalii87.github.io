@@ -49,11 +49,19 @@ export function PhilosophicalEssayPage({ lang, slug }: { lang: EssayLocale; slug
   const file = join(process.cwd(), 'app', 'content', 'essays', `${slug}.${lang}.md`);
   const [, ...blocks] = readFileSync(file, 'utf8').replace(/\r\n/g, '\n').trim().split(/\n[ \t]*\n/);
   const sections: { title?: string; id?: string; blocks: string[] }[] = [{ blocks: [] }];
+  let sectionNumber = 0;
 
   for (const block of blocks) {
-    // The Ukrainian essay's original uses level-three headings for its main sections.
+    if (slug === 'before-the-mirror-of-superintelligence' && block.startsWith('## ')) {
+      sections.push({ title: block.slice(3), id: 'authors-note', blocks: [] });
+      continue;
+    }
+    if (block === '<!-- essay-intro -->') {
+      sections.push({ blocks: [] });
+      continue;
+    }
     const heading = block.match(slug === 'trish' ? /^## (.+)$/ : /^### (.+)$/);
-    if (heading) sections.push({ title: heading[1], id: `section-${sections.length}`, blocks: [] });
+    if (heading) sections.push({ title: heading[1], id: `section-${++sectionNumber}`, blocks: [] });
     else sections[sections.length - 1].blocks.push(block);
   }
 
@@ -68,11 +76,11 @@ export function PhilosophicalEssayPage({ lang, slug }: { lang: EssayLocale; slug
         <aside>
           <nav className="essayContents" aria-label={labels.contents}>
             <p className="kicker">{labels.contents}</p>
-            <ol>{sections.slice(1).map(({ id, title }) => <li key={id}><a href={`#${id}`}>{title}</a></li>)}</ol>
+            <ol>{sections.filter(({ id }) => id).map(({ id, title }) => <li key={id}><a href={`#${id}`}>{title}</a></li>)}</ol>
           </nav>
         </aside>
         <div>
-          {sections.map(({ id, title, blocks }) => (
+          {sections.filter(({ blocks }) => blocks.length > 0).map(({ id, title, blocks }) => (
             <section key={id ?? 'intro'} aria-labelledby={id}>
               {title && <h2 id={id}>{title}</h2>}
               {blocks.map((text, index) => <EssayBlock key={index} text={text} />)}

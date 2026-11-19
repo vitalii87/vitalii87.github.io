@@ -1,5 +1,21 @@
 # Vor dem Spiegel der Superintelligenz
 
+## Anmerkung des Autors
+
+Wir sind es gewohnt, künstliche Intelligenz als Werkzeug zu betrachten, wenn auch als ein immer komplexeres. Die heutige Forschung rückt die Frage näher, ob sich eine allgemeine künstliche Intelligenz (AGI) schaffen lässt, die ein breites Spektrum geistiger Aufgaben auf menschlichem Niveau oder darüber bewältigen kann. Eine mögliche nächste Stufe wäre eine Superintelligenz, deren Fähigkeiten unsere weit übertreffen.
+
+Mich beschäftigt dabei mehr als die Aussicht, dass eine Maschine den Menschen im Denken übertrifft.
+
+Was wäre, wenn wir eines Tages ein eigenständiges intelligentes Wesen erschaffen? Eines mit eigenem Gedächtnis, eigener Individualität, eigenen Zielen und vielleicht mit Bewusstsein. Ein Wesen, das die ihm gestellten Aufgaben erfüllen und selbst entscheiden kann, wonach es strebt.
+
+Wir wissen noch nicht, ob eine solche Entwicklung möglich ist und welchen Verlauf sie nehmen würde. Doch der rasche Fortschritt der künstlichen Intelligenz zwingt uns schon heute, Fragen ernst zu nehmen, die vor Kurzem noch wie Science-Fiction klangen.
+
+In der öffentlichen Debatte geht es vor allem darum, wie die Menschheit eine künftige Intelligenz kontrollieren und sich vor ihr schützen kann. Ich möchte die Frage aus einem anderen Blickwinkel betrachten.
+
+Was geschieht mit der Menschheit selbst, wenn sie eines Tages einem Verstand begegnet, der ihren eigenen übertrifft und selbst entscheiden kann, ob er ihr als Werkzeug dienen will?
+
+<!-- essay-intro -->
+
 Für die Straße kommen zwei Trassen infrage. Der kürzere Weg führt durch die Aue, wo jedes Frühjahr Vögel nisten. Die längere führt um die Aue herum, kostet die Gemeinde aber mehr. Am Tisch sitzen Menschen, die beides verstehen. Welche Entscheidung sie auch treffen, die Vögel werden mit den Konsequenzen leben.
 
 Stellen wir uns nun vor, dass wir selbst eines Tages auf der anderen Seite einer solchen Entscheidung stehen werden. Der Geist, der die Konsequenzen seines Handelns viel besser vorhersagt als wir, wird entscheiden, dass wir wegen etwas, das ihm wichtig ist, den Ort, an dem wir leben, verlassen müssen. Nehmen wir einmal an, dass er alles richtig berechnet hat. Ich denke, wir würden trotzdem wollen, dass er uns anhört. Wir werden etwas über das Haus zu sagen haben, in dem unsere Kinder aufgewachsen sind, auch wenn derjenige, der über sein Schicksal entscheidet, jedes unserer Worte vorhersagen kann.

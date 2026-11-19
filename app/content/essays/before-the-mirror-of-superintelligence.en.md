@@ -1,5 +1,21 @@
 # Before the Mirror of Superintelligence
 
+## Author’s note
+
+We are used to thinking of artificial intelligence as a tool, albeit an increasingly sophisticated one. Current research is bringing us closer to the question of whether we can create artificial general intelligence (AGI), capable of performing a wide range of intellectual tasks at or above human level. A possible next stage would be superintelligence, with abilities far beyond our own.
+
+What interests me goes beyond the prospect of a machine outthinking a human being.
+
+What if one day we create an independent intelligent being? One with a memory, an individuality and goals of its own, and perhaps consciousness. A being that can carry out the tasks we set it and decide for itself what it wants to pursue.
+
+We do not yet know whether such a development is possible or what path it would take. But rapid progress in artificial intelligence is already forcing us to take seriously questions that until recently seemed like science fiction.
+
+Much of the public debate focuses on how humanity will control a future intelligence and protect itself from it. I want to look at the question from another angle.
+
+What will happen to humanity itself if it one day encounters a mind that surpasses its own and can decide for itself whether to serve as its tool?
+
+<!-- essay-intro -->
+
 There are two possible routes for the road. The shorter one will pass through the floodplain, where birds nest every spring. The longer route would go around it, but the community will have to pay more. Those at the table understand both considerations. Whatever decision they make, the birds will live with its consequences.
 
 Now let's imagine that one day we ourselves will find ourselves on the other side of such a decision. A mind that predicts the consequences of its actions much better than we do, will decide that for the sake of something important to it, we will have to leave the place where we live. Suppose it has even got the calculations right. I think we would still want it to hear us out. We will have something to say about the house in which our children grew up, even if the one who decides its fate is able to predict our every word.
