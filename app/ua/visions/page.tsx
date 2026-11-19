@@ -21,6 +21,10 @@ export default function VisionsPage() {
           <Link href={idea.href} className="themeRow" key={idea.href}><span>{idea.number}</span><div><p className="kicker">{idea.meta}</p><h2>{idea.title}</h2><p>{idea.description}</p></div><span aria-hidden="true">↗</span></Link>
         ))}
       </section>
+      <section className="themeList shell" aria-labelledby="philosophical-essays">
+        <h2 id="philosophical-essays">Філософські есеї</h2>
+        <Link href="/ua/visions/before-the-mirror-of-superintelligence/" className="themeRow"><span>05</span><div><h3>Перед дзеркалом надінтелекту</h3><p>Як перспектива втрати влади може змінити ставлення людей до слабших і до створеного ними розуму?</p></div><span aria-hidden="true">↗</span></Link>
+      </section>
     </main>
   );
 }

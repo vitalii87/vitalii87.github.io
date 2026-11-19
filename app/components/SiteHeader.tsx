@@ -50,6 +50,9 @@ export function SiteHeader() {
     { href: `${prefix}/about`, label: copy[language].about },
   ];
   const localizedHref = (nextLanguage: 'en' | 'de') => {
+    if (pathWithoutLanguage.replace(/\/$/, '') === '/visions/before-the-mirror-of-superintelligence') {
+      return nextLanguage === 'en' ? '/visions/' : '/de/visions/';
+    }
     if (pathWithoutLanguage === '/visions/intelligence-attractor/paper/' && nextLanguage === 'de') {
       return '/de/visions/intelligence-attractor';
     }
