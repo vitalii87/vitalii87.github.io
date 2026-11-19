@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { dualRisingPath, dualRisingPublished, dualRisingUpdated } from './content/dualRising';
+import { essayLocales, essayPath, essaySlugs } from './content/philosophicalEssays';
 
 export const dynamic = 'force-static';
 
@@ -19,14 +20,15 @@ const contentPaths = [
   '/about/',
 ];
 
+const essayRoutes = essayLocales.flatMap((lang) => essaySlugs.map((slug) => essayPath(lang, slug)));
+
 const routes = [
   ...contentPaths,
   ...contentPaths.filter((path) => path !== '/visions/intelligence-attractor/paper/').map((path) => `/de${path}`),
   ...contentPaths.filter((path) => path !== '/visions/intelligence-attractor/paper/').map((path) => `/ua${path}`),
   '/ua/projects/qa-automation/',
   '/ua/projects/thought-traces/',
-  '/ua/visions/before-the-mirror-of-superintelligence/',
-  '/ua/visions/trish/',
+  ...essayRoutes,
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -37,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const isVisionsIndex = route.endsWith('/visions/');
     return {
       url: `https://zhyliaiev.eu${route}`,
-      lastModified: ['/ua/visions/before-the-mirror-of-superintelligence/', '/ua/visions/trish/', '/ua/visions/'].includes(route) ? new Date('2026-11-19') : isDualRising ? new Date(dualRisingUpdated) : isVisionsIndex ? new Date(dualRisingPublished) : isVision ? new Date('2026-09-08') : undefined,
+      lastModified: essayRoutes.includes(route) || isVisionsIndex ? new Date('2026-11-19') : isDualRising ? new Date(dualRisingUpdated) : isVision ? new Date('2026-09-08') : undefined,
       changeFrequency: route === '' || isVision ? 'monthly' : 'yearly',
       priority: route === '' ? 1 : isPaper ? 0.9 : 0.7,
     };

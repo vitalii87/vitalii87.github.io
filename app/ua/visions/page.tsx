@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { dualRising, dualRisingPath } from '../../content/dualRising';
+import { PhilosophicalEssayList } from '../../components/PhilosophicalEssayList';
 
 export const metadata: Metadata = { title: 'Погляди — V/01', description: 'Гіпотези Віталія Жиляєва про інтелект, оптимізацію, технології та майбутнє.' };
 
@@ -9,11 +10,6 @@ const ideas = [
   { number: '02', meta: 'IAH · Додаток A · v0.1', title: 'Послаблення впливу походження', description: 'Перевірювана теза про те, що поблизу спільного фронтиру історично випадкові відмінності менше визначають функціональні властивості систем.', href: '/ua/visions/origin-attenuation' },
   { number: '03', meta: 'IAH · Додаток C · v0.1', title: 'Реляційне звуження і сильна функціональна унікальність', description: 'Як точніший причинний контекст може розрізняти альтернативи та як перевіряти існування єдиного граничного функціонального класу.', href: '/ua/visions/relational-narrowing' },
   { number: '04', meta: dualRising.uk.category, title: dualRising.uk.title, description: dualRising.uk.description, href: `/ua${dualRisingPath}` },
-];
-
-const essays = [
-  { number: '05', meta: 'Філософське есе', title: 'Перед дзеркалом надінтелекту', description: 'Як перспектива втрати влади може змінити ставлення людей до слабших і до створеного ними розуму?', href: '/ua/visions/before-the-mirror-of-superintelligence/' },
-  { number: '06', meta: 'Філософське есе · англійською', title: 'TRISH', description: 'Чи може інтелект усередині створеного світу зрозуміти його основу глибше за своїх творців?', href: '/ua/visions/trish/' },
 ];
 
 function VisionRow({ idea }: { idea: (typeof ideas)[number] }) {
@@ -34,12 +30,7 @@ export default function VisionsPage() {
       <section className="themeList shell" aria-label="Опубліковані тексти">
         {ideas.map((idea) => <VisionRow key={idea.href} idea={idea} />)}
       </section>
-      <section className="shell" aria-labelledby="philosophical-essays">
-        <h2 id="philosophical-essays" className="kicker themeGroupTitle">Філософські есеї</h2>
-        <div className="themeList">
-          {essays.map((idea) => <VisionRow key={idea.href} idea={idea} />)}
-        </div>
-      </section>
+      <PhilosophicalEssayList lang="uk" offset={ideas.length} />
     </main>
   );
 }
