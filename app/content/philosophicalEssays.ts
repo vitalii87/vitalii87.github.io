@@ -5,9 +5,9 @@ export const essaySlugs = ['before-the-mirror-of-superintelligence', 'trish'] as
 export type EssaySlug = (typeof essaySlugs)[number];
 
 export const essayLabels = {
-  uk: { group: 'Філософські есеї', category: 'Філософське есе', contents: 'Зміст', author: 'Віталій Жиляєв', languages: 'Мови есе' },
-  en: { group: 'Philosophical Essays', category: 'Philosophical essay', contents: 'Contents', author: 'Vitalii Zhyliaiev', languages: 'Essay languages' },
-  de: { group: 'Philosophische Essays', category: 'Philosophischer Essay', contents: 'Inhalt', author: 'Vitalii Zhyliaiev', languages: 'Sprachen des Essays' },
+  uk: { group: 'Філософські есеї', category: 'Філософське есе', contents: 'Зміст' },
+  en: { group: 'Philosophical Essays', category: 'Philosophical essay', contents: 'Contents' },
+  de: { group: 'Philosophische Essays', category: 'Philosophischer Essay', contents: 'Inhalt' },
 } satisfies Record<EssayLocale, Record<string, string>>;
 
 export const essayCopy = {

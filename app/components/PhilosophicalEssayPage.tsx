@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { essayCopy, essayLabels, essayLocales, essayPath, essayUrl, type EssayLocale, type EssaySlug } from '../content/philosophicalEssays';
+import { essayCopy, essayLabels, essayPath, essayUrl, type EssayLocale, type EssaySlug } from '../content/philosophicalEssays';
 
 export function philosophicalEssayMetadata(lang: EssayLocale, slug: EssaySlug): Metadata {
   const { title, description } = essayCopy[slug][lang];
@@ -61,17 +61,8 @@ export function PhilosophicalEssayPage({ lang, slug }: { lang: EssayLocale; slug
     <main className="articlePage essayPage" lang={lang}>
       <header className="articleHeader essayHeader shell">
         <Link className="backLink" href={`${essayPath(lang)}#philosophical-essays`}>← {labels.group}</Link>
-        <p className="kicker">{labels.category}</p>
         <h1 id="essay-title">{copy.title}</h1>
         {'subtitle' in copy && <p className="essaySubtitle">{copy.subtitle}</p>}
-        <p className="essayByline">{labels.author}</p>
-        <nav className="languageNav" aria-label={labels.languages}>
-          {essayLocales.map((locale) => (
-            <Link key={locale} href={essayPath(locale, slug)} hrefLang={locale} lang={locale} className={locale === lang ? 'active' : undefined} aria-current={locale === lang ? 'page' : undefined}>
-              {{ uk: 'Українська', en: 'English', de: 'Deutsch' }[locale]}
-            </Link>
-          ))}
-        </nav>
       </header>
       <article className="articleBody essayBody shell" aria-labelledby="essay-title">
         <aside>
