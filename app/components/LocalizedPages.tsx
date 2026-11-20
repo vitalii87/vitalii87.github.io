@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { localized, projectSlugs, visionSlugs, type Language } from '../content/localized';
-import { dualRising, dualRisingSlug } from '../content/dualRising';
 import { ArticleDetail } from './ArticleDetail';
 import { ProjectDetail } from './ProjectDetail';
 import { OriginStory } from './OriginStory';
@@ -55,7 +54,7 @@ export function LocalizedProjectPage({ lang, slug }: { lang: Language; slug: Pro
 
 export function LocalizedVisionsPage({ lang }: { lang: Language }) {
   const heading = localized[lang].visionHeading; const visions = localized[lang].visions;
-  const entries = [...visionSlugs.map((slug) => ({ slug, ...visions[slug] })), { slug: dualRisingSlug, ...dualRising[lang] }];
+  const entries = [{ slug: 'intelligence-attractor', ...visions['intelligence-attractor'] }];
   return <main className="pageMain visionsPage"><section className="pageHero shell"><p className="kicker">{heading.kicker}</p><h1>{heading.title1}<br /><span>{heading.title2}</span></h1><p className="pageLead">{heading.lead}</p></section><section className="manifesto shell"><p className="kicker">{heading.position}</p><p className="manifestoPlaceholder">{heading.manifesto}</p></section><section className="themeList shell">{entries.map(({ slug, category, title, description }, index) => <Link href={localizedPath(lang, `/visions/${slug}`)} className="themeRow" key={slug}><span>{String(index + 1).padStart(2, '0')}</span><div><p className="kicker">{category}</p><h2>{title}</h2><p>{description}</p></div><span aria-hidden="true">↗</span></Link>)}</section><PhilosophicalEssayList lang={lang} offset={entries.length} /></main>;
 }
 

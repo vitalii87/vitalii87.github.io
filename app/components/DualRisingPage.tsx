@@ -3,6 +3,7 @@ import { join } from 'node:path';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { essayLabels } from '../content/philosophicalEssays';
 import {
   dualRising,
   dualRisingPath,
@@ -111,7 +112,7 @@ export function DualRisingPage({ lang }: { lang: DualRisingLanguage }) {
   return (
     <main className="articlePage essayPage" lang={lang}>
       <header className="articleHeader essayHeader shell">
-        <Link className="backLink" href={`${copy.prefix}/visions/`}>← {copy.back}</Link>
+        <Link className="backLink" href={`${copy.prefix}/visions/#philosophical-essays`}>← {essayLabels[lang].group}</Link>
         <p className="kicker">{copy.category}</p>
         <h1 id="essay-title">{copy.title}</h1>
         <p className="essaySubtitle">{essay.subtitle}</p>

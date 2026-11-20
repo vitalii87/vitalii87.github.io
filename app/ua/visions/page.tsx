@@ -1,15 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { dualRising, dualRisingPath } from '../../content/dualRising';
 import { PhilosophicalEssayList } from '../../components/PhilosophicalEssayList';
 
 export const metadata: Metadata = { title: 'Погляди — V/01', description: 'Гіпотези Віталія Жиляєва про інтелект, оптимізацію, технології та майбутнє.' };
 
 const ideas = [
   { number: '01', meta: 'Концептуальний препринт · v0.1', title: 'Гіпотеза атрактора інтелекту', description: 'Незалежна конвергенція, послаблення впливу походження та оптимізація архітектури під спільними обмеженнями реальності.', href: '/ua/visions/intelligence-attractor' },
-  { number: '02', meta: 'IAH · Додаток A · v0.1', title: 'Послаблення впливу походження', description: 'Перевірювана теза про те, що поблизу спільного фронтиру історично випадкові відмінності менше визначають функціональні властивості систем.', href: '/ua/visions/origin-attenuation' },
-  { number: '03', meta: 'IAH · Додаток C · v0.1', title: 'Реляційне звуження і сильна функціональна унікальність', description: 'Як точніший причинний контекст може розрізняти альтернативи та як перевіряти існування єдиного граничного функціонального класу.', href: '/ua/visions/relational-narrowing' },
-  { number: '04', meta: dualRising.uk.category, title: dualRising.uk.title, description: dualRising.uk.description, href: `/ua${dualRisingPath}` },
 ];
 
 function VisionRow({ idea }: { idea: (typeof ideas)[number] }) {
